@@ -74,7 +74,7 @@ export default function HomePage() {
 
           {/* Subtext */}
           <p
-            className="text-[18px] font-light leading-[1.7] max-w-[560px] mx-auto mb-12 animate-fadeUp"
+            className="text-[18px] font-light leading-[1.7] max-w-[480px] mx-auto mb-12 animate-fadeUp"
             style={{
               color: 'rgba(247, 246, 243, 0.72)',
               animationDelay: '250ms',
@@ -96,7 +96,7 @@ export default function HomePage() {
               <Button
                 href="/case-studies"
                 variant="secondary"
-                className="border-white text-white hover:bg-white hover:text-[#0F1113]"
+                className="border border-white text-white hover:bg-white hover:text-[#0F1113] px-8 py-3"
               >
                 Explore Our Work
               </Button>
@@ -129,7 +129,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 2 — STATEMENT */}
-      <section className="bg-[#F7F6F3] py-[140px]">
+      <section className="bg-[#F7F6F3] py-[160px]">
         <div className="container-custom max-w-4xl">
           <AnimatedSection>
             <p
@@ -139,7 +139,7 @@ export default function HomePage() {
               Most programmes do not fail because they are complex.
             </p>
             <p
-              className="font-display italic text-[#2F5D62] text-center leading-[1.4] mb-10"
+              className="font-display italic text-[#2F5D62] text-center leading-[1.4] mb-16"
               style={{ fontSize: 'clamp(32px, 4.5vw, 54px)' }}
             >
               They fail because complexity is not controlled.
@@ -155,20 +155,20 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 3 — SERVICES GRID */}
-      <section className="bg-[#F7F6F3] pb-[140px]">
+      <section className="bg-[#F7F6F3] pb-[160px]">
         <div className="container-custom max-w-5xl">
           <div className="mb-12">
             <SectionLabel>WHAT WE DO</SectionLabel>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 md:divide-x md:divide-[#E8E6E1]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-[#E8E6E1]">
             {/* Card 1 */}
             <AnimatedSection delay={0} className="md:pr-6">
               <div className="pt-10 border-t border-[#0F1113]">
                 <h3 className="font-display text-[22px] text-[#0F1113] font-medium">
                   Programme Delivery & Coordination
                 </h3>
-                <p className="text-[14px] text-[#A89F91] mt-2">Structure and governance.</p>
+                <p className="text-[14px] text-[#B5ADA0] mt-2">Structure and governance.</p>
                 <p className="text-[16px] text-[#0F1113] opacity-72 mt-6 leading-[1.7]">
                   We bring structure, ownership, and control to complex programmes — turning fragmented delivery into coordinated execution.
                 </p>
@@ -181,7 +181,7 @@ export default function HomePage() {
                 <h3 className="font-display text-[22px] text-[#0F1113] font-medium">
                   Go-Live Readiness & Closure
                 </h3>
-                <p className="text-[14px] text-[#A89F91] mt-2">Readiness and transition.</p>
+                <p className="text-[14px] text-[#B5ADA0] mt-2">Readiness and transition.</p>
                 <p className="text-[16px] text-[#0F1113] opacity-72 mt-6 leading-[1.7]">
                   We define readiness clearly — ensuring go-live decisions are controlled, understood, and credible.
                 </p>
@@ -194,7 +194,7 @@ export default function HomePage() {
                 <h3 className="font-display text-[22px] text-[#0F1113] font-medium">
                   Website Delivery & Coordination
                 </h3>
-                <p className="text-[14px] text-[#A89F91] mt-2">Premium digital delivery.</p>
+                <p className="text-[14px] text-[#B5ADA0] mt-2">Premium digital delivery.</p>
                 <p className="text-[16px] text-[#0F1113] opacity-72 mt-6 leading-[1.7]">
                   We deliver high-quality websites through structured coordination — without the complexity of managing multiple parties.
                 </p>
@@ -205,7 +205,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 4 — FEATURED WORK */}
-      <section className="bg-[#0F1113] py-[140px]">
+      <section className="bg-[#0F1113] py-[160px]">
         <div className="container-custom">
           <AnimatedSection>
             <div className="mb-8">
@@ -254,9 +254,9 @@ export default function HomePage() {
                 <p className="text-[15px] leading-[1.7] mb-6" style={{ color: 'rgba(247, 246, 243, 0.65)' }}>
                   Multiple suppliers. Unresolved issues. No clear closure position.
                 </p>
-                <div className="border-l-2 border-[#2F5D62] pl-4 mb-6">
+                <div className="border-l-2 border-[#2F5D62] pl-4 mb-6 mt-8">
                   <p className="text-[14px] italic text-[#A89F91]">
-                    Result: A controlled closure, not a forced ending.
+                    A controlled closure, not a forced ending.
                   </p>
                 </div>
                 <Button href="/case-studies" variant="ghost" className="text-white">
@@ -279,7 +279,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 5 — HOW WE WORK */}
-      <section className="bg-[#F7F6F3] py-[140px]">
+      <section className="bg-[#F7F6F3] py-[160px]">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left Column */}
@@ -358,7 +358,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 6 — CLOSING CTA */}
-      <section className="bg-[#0F1113] py-[140px]">
+      <section className="bg-[#0F1113] py-[160px]">
         <div className="container-custom max-w-2xl text-center">
           <AnimatedSection>
             <div className="mb-8 flex justify-center">
@@ -371,7 +371,7 @@ export default function HomePage() {
               className="text-[18px] text-white max-w-lg mx-auto mb-12 leading-[1.7]"
               style={{ opacity: 0.65 }}
             >
-              We are here to help you move from where you are to where delivery is controlled.
+              We help you move from where you are to where delivery is controlled.
             </p>
             <div className="flex justify-center">
               <Button href="/contact" variant="primary">
