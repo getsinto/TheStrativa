@@ -146,6 +146,11 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
     notFound();
   }
 
+  // Safely handle arrays - provide defaults if undefined
+  const problem = Array.isArray(caseStudy.problem) ? caseStudy.problem : [];
+  const intervention = Array.isArray(caseStudy.intervention) ? caseStudy.intervention : [];
+  const outcome = Array.isArray(caseStudy.outcome) ? caseStudy.outcome : [];
+
   // Find next case study
   const currentIndex = STATIC_CASE_STUDIES.findIndex(
     (study) => study.slug.current === params.slug
@@ -216,7 +221,7 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
             </div>
 
             <ul className="space-y-4">
-              {caseStudy.problem.map((item: string, index: number) => (
+              {problem.map((item: string, index: number) => (
                 <li key={index} className="text-[17px] text-[#0F1113] leading-[1.7] pl-0">
                   {item}
                 </li>
@@ -233,7 +238,7 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
             </div>
 
             <ul className="space-y-6">
-              {caseStudy.intervention.map((item: string, index: number) => (
+              {intervention.map((item: string, index: number) => (
                 <li key={index} className="text-[16px] text-[#0F1113] leading-[1.7]">
                   {item}
                 </li>
@@ -250,7 +255,7 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
             </div>
 
             <div className="space-y-4">
-              {caseStudy.outcome.map((paragraph: string, index: number) => (
+              {outcome.map((paragraph: string, index: number) => (
                 <p key={index} className="text-[17px] text-[#0F1113] leading-[1.8]">
                   {paragraph}
                 </p>
