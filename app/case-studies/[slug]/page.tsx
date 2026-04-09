@@ -146,10 +146,28 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
     notFound();
   }
 
-  // Safely handle arrays - provide defaults if undefined
-  const problem = Array.isArray(caseStudy.problem) ? caseStudy.problem : [];
-  const intervention = Array.isArray(caseStudy.intervention) ? caseStudy.intervention : [];
-  const outcome = Array.isArray(caseStudy.outcome) ? caseStudy.outcome : [];
+  // Handle both old format (problem/intervention/outcome arrays) and new format (challenge/approach/outcome text)
+  // Check if we have the new Sanity format (challenge, approach as text)
+  const hasNewFormat = caseStudy.challenge && typeof caseStudy.challenge === 'string';
+  
+  let problem: string[] = [];
+  let intervention: string[] = [];
+  let outcome: string[] = [];
+  let situation = caseStudy.situation || '';
+  
+  if (hasNewFormat) {
+    // Convert Sanity format to display format
+    situation = caseStudy.challenge?.split('.')[0] + '.' || '';
+    problem = caseStudy.challenge?.split('.').slice(1).filter((s: string) => s.trim()) || [];
+    intervention = Array.isArray(caseStudy.approach) ? caseStudy.approach : 
+                   (caseStudy.approach ? [caseStudy.approach] : []);
+    outcome = caseStudy.outcome ? [caseStudy.outcome] : [];
+  } else {
+    // Use original format (arrays)
+    problem = Array.isArray(caseStudy.problem) ? caseStudy.problem : [];
+    intervention = Array.isArray(caseStudy.intervention) ? caseStudy.intervention : [];
+    outcome = Array.isArray(caseStudy.outcome) ? caseStudy.outcome : [];
+  }
 
   // Find next case study
   const currentIndex = STATIC_CASE_STUDIES.findIndex(
@@ -208,7 +226,7 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
             </div>
 
             <p className="font-display italic text-[22px] text-[#0F1113] leading-[1.6] mb-12">
-              {caseStudy.situation}
+              {situation || caseStudy.situation}
             </p>
           </AnimatedSection>
 
