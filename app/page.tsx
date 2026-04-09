@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <main className="pt-20">
       {/* SECTION 1 — HERO */}
-      <section className="relative min-h-[100svh] bg-[#0F1113] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100svh] bg-[#0F1113] flex items-center justify-center overflow-hidden pb-20">
         {/* Subtle texture overlay */}
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.04]"
@@ -86,7 +86,7 @@ export default function HomePage() {
 
           {/* Buttons */}
           <div
-            className="flex flex-col items-center gap-4 animate-fadeUp"
+            className="flex flex-col items-center gap-4 mb-16 animate-fadeUp"
             style={{ animationDelay: '400ms', animationFillMode: 'both' }}
           >
             <div className="flex gap-4 justify-center flex-wrap">
@@ -107,8 +107,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        {/* Scroll indicator - positioned at bottom */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
           <svg
             width="24"
             height="24"
