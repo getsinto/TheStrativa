@@ -1,0 +1,97 @@
+import type { Metadata } from 'next';
+import { inter, playfair } from '@/lib/fonts';
+import Nav from '@/components/layout/Nav';
+import Footer from '@/components/layout/Footer';
+import '@/styles/globals.css';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://thestrativa.com'),
+  title: {
+    default: 'The Strativa | Programme Delivery & Transformation Consulting',
+    template: '%s | The Strativa',
+  },
+  description: 'Strativa is a delivery-focused partnership helping organisations deliver complex ERP and transformation programmes with clarity, structure, and control.',
+  keywords: [
+    'programme delivery',
+    'ERP implementation',
+    'transformation consulting',
+    'go-live readiness',
+    'programme governance',
+  ],
+  authors: [{ name: 'The Strativa' }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_GB',
+    url: 'https://thestrativa.com',
+    siteName: 'The Strativa',
+    title: 'The Strativa | Programme Delivery & Transformation Consulting',
+    description: 'Clarity where others see complexity. We help organisations deliver complex programmes with structure, control, and confidence.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'The Strativa',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Strativa | Programme Delivery',
+    description: 'Delivery-focused partnership for ERP and transformation programmes.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: 'https://thestrativa.com',
+  },
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'The Strativa',
+  url: 'https://thestrativa.com',
+  email: 'hello@thestrativa.com',
+  description: 'Delivery-focused partnership for ERP and transformation programmes',
+  founder: [
+    {
+      '@type': 'Person',
+      name: 'Olusegun Olamide',
+    },
+    {
+      '@type': 'Person',
+      name: 'Hiram Kanwal',
+    },
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;700;900&display=swap" 
+          rel="stylesheet" 
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
+}

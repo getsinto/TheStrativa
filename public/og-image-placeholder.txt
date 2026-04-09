@@ -1,0 +1,21 @@
+OG IMAGE PLACEHOLDER
+
+This file serves as a placeholder for the actual OG image.
+
+Please create: public/og-image.png
+
+Dimensions: 1200px × 630px
+Format: PNG
+
+Design specifications are in public/generate-og.js
+
+Quick Design Guide:
+- Background: #0F1113 (charcoal)
+- Wordmark: "STRATIVA" in white, Playfair Display, centered
+- Tagline: "Clarity where others see complexity." in white 65% opacity, Inter
+- Decorative teal line above wordmark
+
+Tools you can use:
+1. Canva (easiest): Use custom dimensions 1200×630
+2. Figma (for designers): Create frame 1200×630
+3. @vercel/og (for developers): See generate-og.js for code example
