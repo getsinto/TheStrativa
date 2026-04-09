@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://thestrativa.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://the-strativa.vercel.app'),
   title: {
     default: 'The Strativa | Programme Delivery & Transformation Consulting',
     template: '%s | The Strativa',
