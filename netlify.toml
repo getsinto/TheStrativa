@@ -24,10 +24,3 @@
   for = "/studio/*"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
-
-# Redirect /studio to /studio/ (trailing slash)
-[[redirects]]
-  from = "/studio"
-  to = "/studio/"
-  status = 301
-  force = true
