@@ -101,8 +101,27 @@ export default async function InsightPage({ params }: { params: { slug: string }
     (item) => item.slug.current !== params.slug
   ).slice(0, 2);
 
-  // Split body into paragraphs
-  const paragraphs = insight.body.split('\n\n').filter((p: string) => p.trim());
+  // Convert body to plain text if it's Portable Text
+  const getBodyText = (body: any): string => {
+    if (typeof body === 'string') return body;
+    if (!body) return '';
+    if (Array.isArray(body)) {
+      // Portable Text format
+      return body
+        .map(block => {
+          if (typeof block === 'string') return block;
+          if (block?.children) {
+            return block.children.map((c: any) => c.text || '').join('');
+          }
+          return '';
+        })
+        .join('\n\n');
+    }
+    return String(body);
+  };
+
+  const bodyText = getBodyText(insight.body);
+  const paragraphs = bodyText.split('\n\n').filter((p: string) => p.trim());
 
   return (
     <main className="pt-20">
