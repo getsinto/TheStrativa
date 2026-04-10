@@ -5,7 +5,7 @@ import Button from '@/components/ui/Button';
 
 export const metadata = {
   title: 'Clarity Where Others See Complexity',
-  description: 'The Strativa helps organisations deliver complex programmes with structure, control, and confidence. ERP, transformation, go-live readiness, and digital delivery.',
+  description: 'Straton helps organisations deliver complex programmes with structure, control, and confidence. ERP, transformation, go-live readiness, and digital delivery.',
 };
 
 export default function HomePage() {
@@ -47,7 +47,7 @@ export default function HomePage() {
               className="font-display text-[18px] tracking-[0.3em] text-white font-medium"
               style={{ letterSpacing: '0.3em' }}
             >
-              STRATIVA
+              STRATON
             </span>
           </div>
 
@@ -381,10 +381,10 @@ export default function HomePage() {
             <p className="text-[14px] text-[#A89F91] mt-6">
               Or email us at{' '}
               <a
-                href="mailto:hello@thestrativa.com"
+                href="mailto:hello@straton.com"
                 className="hover:text-[#2F5D62] transition-colors"
               >
-                hello@thestrativa.com
+                hello@straton.com
               </a>
             </p>
           </AnimatedSection>

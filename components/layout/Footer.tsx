@@ -7,6 +7,8 @@ const navigationLinks = [
   { href: '/services', label: 'Services' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/insights', label: 'Insights' },
+  { href: '/delivery-standards', label: 'Delivery Standards' },
+  { href: '/pricing', label: 'Pricing' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -40,7 +42,7 @@ export default function Footer() {
                 className="font-display text-[15px] tracking-[0.25em] text-white font-medium"
                 style={{ letterSpacing: '0.25em' }}
               >
-                STRATIVA
+                STRATON
               </span>
             </Link>
             <p className="text-[13px] text-[#A89F91] mb-2">Delivery partnership led by</p>
@@ -75,10 +77,10 @@ export default function Footer() {
             </div>
             <div className="space-y-3">
               <a
-                href="mailto:hello@thestrativa.com"
+                href="mailto:hello@straton.com"
                 className="text-[14px] text-[#A89F91] hover:text-[#2F5D62] transition-colors duration-150 block"
               >
-                hello@thestrativa.com
+                hello@straton.com
               </a>
               <a
                 href="/contact"
@@ -111,7 +113,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-[#1E1E1E]">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <p className="text-[13px] text-[#525250]">
-              © 2025 The Strativa · thestrativa.com
+              © 2025 Straton · straton.com
             </p>
             <p className="text-[13px] italic text-[#525250]">
               Programme delivery. Digital execution. Controlled outcomes.

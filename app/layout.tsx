@@ -5,12 +5,12 @@ import Footer from '@/components/layout/Footer';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://the-strativa.vercel.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://straton.com'),
   title: {
-    default: 'The Strativa | Programme Delivery & Transformation Consulting',
-    template: '%s | The Strativa',
+    default: 'Straton | Programme Delivery & Transformation Consulting',
+    template: '%s | Straton',
   },
-  description: 'Strativa is a delivery-focused partnership helping organisations deliver complex ERP and transformation programmes with clarity, structure, and control.',
+  description: 'Straton is a delivery-focused partnership helping organisations deliver complex ERP and transformation programmes with clarity, structure, and control.',
   keywords: [
     'programme delivery',
     'ERP implementation',
@@ -18,26 +18,26 @@ export const metadata: Metadata = {
     'go-live readiness',
     'programme governance',
   ],
-  authors: [{ name: 'The Strativa' }],
+  authors: [{ name: 'Straton' }],
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://thestrativa.com',
-    siteName: 'The Strativa',
-    title: 'The Strativa | Programme Delivery & Transformation Consulting',
+    url: 'https://straton.com',
+    siteName: 'Straton',
+    title: 'Straton | Programme Delivery & Transformation Consulting',
     description: 'Clarity where others see complexity. We help organisations deliver complex programmes with structure, control, and confidence.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'The Strativa',
+        alt: 'Straton',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Strativa | Programme Delivery',
+    title: 'Straton | Programme Delivery',
     description: 'Delivery-focused partnership for ERP and transformation programmes.',
   },
   robots: {
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://thestrativa.com',
+    canonical: 'https://straton.com',
   },
 };
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'The Strativa',
-  url: 'https://thestrativa.com',
-  email: 'hello@thestrativa.com',
+  name: 'Straton',
+  url: 'https://straton.com',
+  email: 'hello@straton.com',
   description: 'Delivery-focused partnership for ERP and transformation programmes',
   founder: [
     {

@@ -8,6 +8,8 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/insights', label: 'Insights' },
+  { href: '/delivery-standards', label: 'Delivery Standards' },
+  { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
 ];
 
@@ -83,7 +85,7 @@ export default function Nav() {
                 className="font-display text-[15px] tracking-[0.25em] text-[#0F1113] font-medium"
                 style={{ letterSpacing: '0.25em' }}
               >
-                STRATIVA
+                STRATON
               </span>
             </Link>
 
