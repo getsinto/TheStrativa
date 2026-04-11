@@ -91,7 +91,8 @@ export default function PricingPage() {
 
                 <div className="mt-auto pt-6 border-t border-[#E8E6E1]">
                   <p className="text-[14px] text-[#A89F91] uppercase tracking-wider mb-2">Price:</p>
-                  <p className="font-display text-[32px] text-[#0F1113]">£150 – £300</p>
+                  <p className="font-display text-[32px] text-[#0F1113]">£200 – £300</p>
+                  <p className="text-[15px] text-[#525250] mt-1">(typical engagement)</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -137,8 +138,10 @@ export default function PricingPage() {
 
                 <div className="mt-auto pt-6 border-t border-[#E8E6E1]">
                   <p className="text-[14px] text-[#A89F91] uppercase tracking-wider mb-2">Price:</p>
-                  <p className="font-display text-[32px] text-[#0F1113]">£150 – £300 per week</p>
-                  <p className="text-[15px] text-[#525250] mt-1">or £300 – £600 per project</p>
+                  <p className="font-display text-[32px] text-[#0F1113]">£200 – £300 per week</p>
+                  <p className="text-[15px] text-[#525250] mt-2">or</p>
+                  <p className="font-display text-[28px] text-[#0F1113] mt-1">£400 – £800</p>
+                  <p className="text-[15px] text-[#525250] mt-1">for a defined piece of work</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -184,8 +187,9 @@ export default function PricingPage() {
 
                 <div className="mt-auto pt-6 border-t border-[#E8E6E1]">
                   <p className="text-[14px] text-[#A89F91] uppercase tracking-wider mb-2">Price:</p>
-                  <p className="font-display text-[32px] text-[#0F1113]">£800 – £2,000</p>
+                  <p className="font-display text-[32px] text-[#0F1113]">From £1,000</p>
                   <p className="text-[15px] text-[#525250] mt-1">per project</p>
+                  <p className="text-[14px] text-[#A89F91] mt-2 italic">(final cost depends on scope and complexity)</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -227,7 +231,7 @@ export default function PricingPage() {
 
                 <div className="mt-auto pt-6 border-t border-[#E8E6E1]">
                   <p className="text-[14px] text-[#A89F91] uppercase tracking-wider mb-2">Price:</p>
-                  <p className="font-display text-[32px] text-[#0F1113]">£300 – £1,500</p>
+                  <p className="font-display text-[32px] text-[#0F1113]">£800 – £2,500</p>
                   <p className="text-[15px] text-[#525250] mt-1">depending on scope</p>
                 </div>
               </div>
