@@ -81,7 +81,7 @@ export default function HomePage() {
               animationFillMode: 'both',
             }}
           >
-            We help organisations take control of complex programmes — bringing structure, direction, and delivery where it matters most.
+            We help organisations take control of complex work bringing structure, direction, and delivery where it matters most.
           </p>
 
           {/* Buttons */}
@@ -136,7 +136,7 @@ export default function HomePage() {
               className="font-display text-center leading-[1.5] mb-8"
               style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}
             >
-              Most programmes do not fail because they are complex.
+              Most projects do not fail because they are complex.
             </p>
             <p
               className="font-display italic text-[#2F5D62] text-center leading-[1.4] mb-16"
@@ -161,16 +161,15 @@ export default function HomePage() {
             <SectionLabel>WHAT WE DO</SectionLabel>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-[#E8E6E1]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-0 md:divide-x md:divide-[#E8E6E1]">
             {/* Card 1 */}
             <AnimatedSection delay={0} className="md:pr-6">
               <div className="pt-10 border-t border-[#0F1113]">
                 <h3 className="font-display text-[22px] text-[#0F1113] font-medium">
-                  Programme Delivery & Coordination
+                  Clarity
                 </h3>
-                <p className="text-[14px] text-[#B5ADA0] mt-2">Structure and governance.</p>
                 <p className="text-[16px] text-[#0F1113] opacity-72 mt-6 leading-[1.7]">
-                  We bring structure, ownership, and control to complex programmes — turning fragmented delivery into coordinated execution.
+                  We bring a clear understanding of your situation and define what needs to happen.
                 </p>
               </div>
             </AnimatedSection>
@@ -179,24 +178,34 @@ export default function HomePage() {
             <AnimatedSection delay={120} className="md:px-6">
               <div className="pt-10 border-t border-[#0F1113]">
                 <h3 className="font-display text-[22px] text-[#0F1113] font-medium">
-                  Go-Live Readiness & Closure
+                  Control
                 </h3>
-                <p className="text-[14px] text-[#B5ADA0] mt-2">Readiness and transition.</p>
                 <p className="text-[16px] text-[#0F1113] opacity-72 mt-6 leading-[1.7]">
-                  We define readiness clearly — ensuring go-live decisions are controlled, understood, and credible.
+                  We structure delivery, manage risks, and keep everything visible and organised.
                 </p>
               </div>
             </AnimatedSection>
 
             {/* Card 3 */}
-            <AnimatedSection delay={240} className="md:pl-6">
+            <AnimatedSection delay={240} className="md:px-6">
               <div className="pt-10 border-t border-[#0F1113]">
                 <h3 className="font-display text-[22px] text-[#0F1113] font-medium">
-                  Website Delivery & Coordination
+                  Delivery
                 </h3>
-                <p className="text-[14px] text-[#B5ADA0] mt-2">Premium digital delivery.</p>
                 <p className="text-[16px] text-[#0F1113] opacity-72 mt-6 leading-[1.7]">
-                  We deliver high-quality websites through structured coordination — without the complexity of managing multiple parties.
+                  We support execution from start to finish, ensuring work progresses in a controlled way.
+                </p>
+              </div>
+            </AnimatedSection>
+
+            {/* Card 4 */}
+            <AnimatedSection delay={360} className="md:pl-6">
+              <div className="pt-10 border-t border-[#0F1113]">
+                <h3 className="font-display text-[22px] text-[#0F1113] font-medium">
+                  Website Delivery
+                </h3>
+                <p className="text-[16px] text-[#0F1113] opacity-72 mt-6 leading-[1.7]">
+                  We deliver high-quality websites through structured coordination, without unnecessary complexity.
                 </p>
               </div>
             </AnimatedSection>
@@ -280,96 +289,206 @@ export default function HomePage() {
 
       {/* SECTION 5 — HOW WE WORK */}
       <section className="bg-[#F7F6F3] py-[160px]">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-            {/* Left Column */}
-            <div className="lg:col-span-2">
-              <AnimatedSection>
-                <div className="mb-6">
-                  <SectionLabel>APPROACH</SectionLabel>
-                </div>
-                <h2 className="font-display text-[38px] text-[#0F1113] leading-[1.2] mb-6">
-                  We do not add complexity. We remove it.
-                </h2>
-                <p className="text-[16px] text-[#525250]">
-                  Three principles guide every engagement.
-                </p>
-              </AnimatedSection>
+        <div className="container-custom max-w-5xl">
+          <AnimatedSection>
+            <div className="mb-12">
+              <SectionLabel>HOW WE WORK</SectionLabel>
+            </div>
+            
+            <h2 className="font-display text-[38px] text-[#0F1113] leading-[1.2] mb-8">
+              We focus only on what creates real value.
+            </h2>
+            
+            <p className="text-[17px] text-[#0F1113] leading-[1.8] mb-12">
+              We do not add unnecessary work, unnecessary complexity, or unnecessary process.
+              <br />
+              Everything we do must have a clear purpose and a clear outcome.
+            </p>
+
+            <div className="bg-white border border-[#E8E6E1] p-10 mb-12">
+              <h3 className="font-display text-[24px] text-[#0F1113] mb-6">What this means:</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-[2px] bg-[#2F5D62] mt-2.5 flex-shrink-0" />
+                  <span className="text-[16px] text-[#0F1113]">We do not build things "just in case".</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-[2px] bg-[#2F5D62] mt-2.5 flex-shrink-0" />
+                  <span className="text-[16px] text-[#0F1113]">We do not create documents or reports that are not actively used.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-5 h-[2px] bg-[#2F5D62] mt-2.5 flex-shrink-0" />
+                  <span className="text-[16px] text-[#0F1113]">We only introduce structure where it improves clarity, reduces risk, or supports delivery.</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Right Column */}
-            <div className="lg:col-span-3">
-              <AnimatedSection delay={150}>
-                <div className="space-y-8">
-                  {/* Principle 1 */}
-                  <div className="flex gap-6 pb-8 border-b border-[#E8E6E1]">
-                    <div className="font-display text-[72px] text-[#E8E6E1] leading-none">
-                      01
-                    </div>
-                    <div className="flex-1 pt-2">
-                      <h3 className="font-display text-[22px] text-[#0F1113] mb-3">
-                        Clarity
-                      </h3>
-                      <p className="text-[15px] text-[#525250] leading-[1.7]">
-                        Everything is defined — ownership, structure, and expectations. Nothing is left ambiguous.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Principle 2 */}
-                  <div className="flex gap-6 pb-8 border-b border-[#E8E6E1]">
-                    <div className="font-display text-[72px] text-[#E8E6E1] leading-none">
-                      02
-                    </div>
-                    <div className="flex-1 pt-2">
-                      <h3 className="font-display text-[22px] text-[#0F1113] mb-3">
-                        Structure
-                      </h3>
-                      <p className="text-[15px] text-[#525250] leading-[1.7]">
-                        Governance and coordination create control. Without structure, delivery is luck.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Principle 3 */}
-                  <div className="flex gap-6 pb-8">
-                    <div className="font-display text-[72px] text-[#E8E6E1] leading-none">
-                      03
-                    </div>
-                    <div className="flex-1 pt-2">
-                      <h3 className="font-display text-[22px] text-[#0F1113] mb-3">
-                        Delivery
-                      </h3>
-                      <p className="text-[15px] text-[#525250] leading-[1.7]">
-                        Progress is measured, managed, and achieved. Not hoped for.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Pull quote */}
-                  <blockquote className="font-display italic text-[24px] text-[#2F5D62] pt-8">
-                    "Clarity is what turns complexity into delivery."
-                  </blockquote>
+            <div className="bg-[#0F1113] text-white p-10 mb-12">
+              <h3 className="font-display text-[24px] mb-6">Our approach:</h3>
+              <p className="text-[16px] opacity-90 mb-6">Before doing any piece of work, we ask three simple questions:</p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-[#2F5D62] text-[20px]">→</span>
+                  <span className="text-[16px]">What problem does this solve?</span>
                 </div>
-              </AnimatedSection>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#2F5D62] text-[20px]">→</span>
+                  <span className="text-[16px]">Who benefits from this?</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-[#2F5D62] text-[20px]">→</span>
+                  <span className="text-[16px]">What happens if we simplify this?</span>
+                </div>
+              </div>
+              <p className="text-[15px] opacity-70 mt-6 italic">
+                If something is unclear, we simplify it before moving forward.
+              </p>
             </div>
-          </div>
+
+            <div className="mb-12">
+              <h3 className="font-display text-[24px] text-[#0F1113] mb-6">Why this matters:</h3>
+              <p className="text-[17px] text-[#0F1113] leading-[1.8] mb-6">
+                Unnecessary work slows delivery, creates confusion, and increases risk.
+              </p>
+              <p className="font-display italic text-[20px] text-[#2F5D62] mb-6">
+                We remove that.
+              </p>
+              <p className="text-[16px] text-[#525250] mb-4">So you get:</p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="w-4 h-[2px] bg-[#2F5D62] mt-2.5 flex-shrink-0" />
+                  <span className="text-[16px] text-[#0F1113]">faster progress</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-4 h-[2px] bg-[#2F5D62] mt-2.5 flex-shrink-0" />
+                  <span className="text-[16px] text-[#0F1113]">clearer outcomes</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-4 h-[2px] bg-[#2F5D62] mt-2.5 flex-shrink-0" />
+                  <span className="text-[16px] text-[#0F1113]">better control</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="border-l-4 border-[#2F5D62] pl-6 py-2">
+              <p className="font-display text-[20px] text-[#0F1113] leading-[1.6]">
+                We keep delivery simple, focused, and effective so effort is spent only where it matters.
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
-      {/* SECTION 6 — CLOSING CTA */}
+      {/* SECTION 6 — APPROACH */}
       <section className="bg-[#0F1113] py-[160px]">
+        <div className="container-custom max-w-6xl">
+          <AnimatedSection>
+            <div className="mb-12 flex justify-center">
+              <SectionLabel light>APPROACH</SectionLabel>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Step 1 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">01</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Define & Align</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We understand the situation and agree on direction.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">02</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Structure</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We organise the work, define tasks, and assign ownership.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">03</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Design</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We define what will be delivered and how it will work.
+                </p>
+              </div>
+
+              {/* Step 4 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">04</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Deliver</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We execute the work while tracking progress and managing risks.
+                </p>
+              </div>
+
+              {/* Step 5 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">05</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Validate</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We test outputs and ensure everything works as expected.
+                </p>
+              </div>
+
+              {/* Step 6 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">06</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Deploy</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We go live in a controlled and confident way.
+                </p>
+              </div>
+
+              {/* Step 7 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">07</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Stabilise</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We resolve issues and ensure everything runs smoothly.
+                </p>
+              </div>
+
+              {/* Step 8 */}
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
+                  <span className="text-[#2F5D62] font-display text-[18px]">08</span>
+                </div>
+                <h3 className="font-display text-[20px] text-white mb-3">Close</h3>
+                <p className="text-[14px] text-white opacity-70">
+                  We confirm delivery and capture lessons learned.
+                </p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* SECTION 7 — CLOSING CTA */}
+      <section className="bg-[#F7F6F3] py-[160px]">
         <div className="container-custom max-w-2xl text-center">
           <AnimatedSection>
             <div className="mb-8 flex justify-center">
-              <SectionLabel light>GET IN TOUCH</SectionLabel>
+              <SectionLabel>GET IN TOUCH</SectionLabel>
             </div>
-            <h2 className="font-display text-[40px] text-white leading-[1.3] mb-6">
-              If you are dealing with complexity, uncertainty, or lack of control.
-            </h2>
             <p
-              className="text-[18px] text-white max-w-lg mx-auto mb-12 leading-[1.7]"
-              style={{ opacity: 0.65 }}
+              className="text-[18px] text-[#0F1113] max-w-lg mx-auto mb-12 leading-[1.7]"
             >
               We help you move from where you are to where delivery is controlled.
             </p>
