@@ -78,6 +78,11 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
     return <FlagshipCaseStudy caseStudy={caseStudy} nextCaseStudy={nextCaseStudy} formatDate={formatDate} />;
   }
 
+  // Safety check - ensure all required properties exist
+  if (!caseStudy.theSituation || !caseStudy.whatWasAtRisk || !caseStudy.whatWeDid || !caseStudy.theResult || !caseStudy.whyItWorked) {
+    notFound();
+  }
+
   // Render regular case study
   return (
     <main className="pt-20">
@@ -101,17 +106,19 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
         </div>
       </section>
 
-      <section className="bg-[#F7F6F3] pt-20 pb-12">
-        <div className="container-custom max-w-3xl">
-          <AnimatedSection>
-            <div className="space-y-4">
-              {caseStudy.situation.split('\n\n').map((para: string, i: number) => (
-                <p key={i} className="font-display italic text-[22px] text-[#0F1113] leading-[1.6]">{para}</p>
-              ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      {caseStudy.situation && (
+        <section className="bg-[#F7F6F3] pt-20 pb-12">
+          <div className="container-custom max-w-3xl">
+            <AnimatedSection>
+              <div className="space-y-4">
+                {caseStudy.situation.split('\n\n').map((para: string, i: number) => (
+                  <p key={i} className="font-display italic text-[22px] text-[#0F1113] leading-[1.6]">{para}</p>
+                ))}
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+      )}
 
       <section className="bg-[#F7F6F3] py-12">
         <div className="container-custom max-w-3xl">
