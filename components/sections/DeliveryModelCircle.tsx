@@ -22,13 +22,10 @@ export default function DeliveryModelCircle() {
     <section className="bg-[#0F1113] py-[160px] overflow-hidden">
       <div className="container-custom">
         <AnimatedSection>
-          <div className="mb-16 text-center">
-            <div className="mb-8 flex justify-center">
+          <div className="mb-12 text-center">
+            <div className="flex justify-center">
               <SectionLabel light>OUR DELIVERY MODEL</SectionLabel>
             </div>
-            <h2 className="font-display text-[42px] text-white mb-4 leading-[1.3]">
-              A clear, structured approach<br />from start to finish.
-            </h2>
           </div>
 
           {/* Circular Diagram */}
@@ -115,10 +112,10 @@ export default function DeliveryModelCircle() {
               {/* Center text */}
               <text
                 x="400"
-                y="380"
+                y="390"
                 textAnchor="middle"
                 fill="white"
-                fontSize="36"
+                fontSize="32"
                 fontFamily="Playfair Display, serif"
                 fontWeight="500"
               >
@@ -126,20 +123,20 @@ export default function DeliveryModelCircle() {
               </text>
               <text
                 x="400"
-                y="420"
+                y="425"
                 textAnchor="middle"
                 fill="#A89F91"
-                fontSize="16"
+                fontSize="14"
                 fontFamily="Inter, sans-serif"
               >
                 A clear, structured approach
               </text>
               <text
                 x="400"
-                y="440"
+                y="445"
                 textAnchor="middle"
                 fill="#A89F91"
-                fontSize="16"
+                fontSize="14"
                 fontFamily="Inter, sans-serif"
               >
                 from start to finish.
