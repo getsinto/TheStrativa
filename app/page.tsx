@@ -2,10 +2,11 @@ import Link from 'next/link';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
 import Button from '@/components/ui/Button';
+import DeliveryModelCircle from '@/components/sections/DeliveryModelCircle';
 
 export const metadata = {
   title: 'Clarity Where Others See Complexity',
-  description: 'Straton helps organisations deliver complex programmes with structure, control, and confidence. ERP, transformation, go-live readiness, and digital delivery.',
+  description: 'Stratora Consulting helps organisations deliver complex programmes with structure, control, and confidence. ERP, transformation, go-live readiness, and digital delivery.',
 };
 
 export default function HomePage() {
@@ -44,10 +45,10 @@ export default function HomePage() {
               />
             </svg>
             <span
-              className="font-display text-[18px] tracking-[0.3em] text-white font-medium"
-              style={{ letterSpacing: '0.3em' }}
+              className="font-display text-[13px] tracking-[0.25em] text-white font-medium uppercase"
+              style={{ letterSpacing: '0.25em' }}
             >
-              STRATON
+              STRATORA CONSULTING
             </span>
           </div>
 
@@ -379,106 +380,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 6 — APPROACH */}
-      <section className="bg-[#0F1113] py-[160px]">
-        <div className="container-custom max-w-6xl">
-          <AnimatedSection>
-            <div className="mb-12 flex justify-center">
-              <SectionLabel light>APPROACH</SectionLabel>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Step 1 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">01</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Define & Align</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We understand the situation and agree on direction.
-                </p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">02</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Structure</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We organise the work, define tasks, and assign ownership.
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">03</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Design</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We define what will be delivered and how it will work.
-                </p>
-              </div>
-
-              {/* Step 4 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">04</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Deliver</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We execute the work while tracking progress and managing risks.
-                </p>
-              </div>
-
-              {/* Step 5 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">05</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Validate</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We test outputs and ensure everything works as expected.
-                </p>
-              </div>
-
-              {/* Step 6 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">06</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Deploy</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We go live in a controlled and confident way.
-                </p>
-              </div>
-
-              {/* Step 7 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">07</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Stabilise</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We resolve issues and ensure everything runs smoothly.
-                </p>
-              </div>
-
-              {/* Step 8 */}
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mx-auto mb-4">
-                  <span className="text-[#2F5D62] font-display text-[18px]">08</span>
-                </div>
-                <h3 className="font-display text-[20px] text-white mb-3">Close</h3>
-                <p className="text-[14px] text-white opacity-70">
-                  We confirm delivery and capture lessons learned.
-                </p>
-              </div>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
+      {/* SECTION 6 — DELIVERY MODEL CIRCLE */}
+      <DeliveryModelCircle />
 
       {/* SECTION 7 — CLOSING CTA */}
       <section className="bg-[#F7F6F3] py-[160px]">
@@ -500,10 +403,10 @@ export default function HomePage() {
             <p className="text-[14px] text-[#A89F91] mt-6">
               Or email us at{' '}
               <a
-                href="mailto:hello@straton.com"
+                href="mailto:hello@stratoraconsulting.com"
                 className="hover:text-[#2F5D62] transition-colors"
               >
-                hello@straton.com
+                hello@stratoraconsulting.com
               </a>
             </p>
           </AnimatedSection>

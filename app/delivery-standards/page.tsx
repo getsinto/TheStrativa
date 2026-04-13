@@ -5,7 +5,7 @@ import Button from '@/components/ui/Button';
 
 export const metadata = {
   title: 'Delivery Standards',
-  description: 'Straton Delivery Standard: Clarity. Structure. Delivery. Everything is defined, visible, and controlled.',
+  description: 'Stratora Consulting Delivery Standard: Clarity. Structure. Delivery. Everything is defined, visible, and controlled.',
 };
 
 export default function DeliveryStandardsPage() {
@@ -34,7 +34,7 @@ export default function DeliveryStandardsPage() {
               animationFillMode: 'both',
             }}
           >
-            Straton Delivery Standard
+            Stratora Consulting Delivery Standard
           </h1>
 
           <p

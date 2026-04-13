@@ -82,10 +82,10 @@ export default function Nav() {
                 />
               </svg>
               <span
-                className="font-display text-[15px] tracking-[0.25em] text-[#0F1113] font-medium"
-                style={{ letterSpacing: '0.25em' }}
+                className="font-display text-[12px] tracking-[0.2em] text-[#0F1113] font-medium uppercase"
+                style={{ letterSpacing: '0.2em' }}
               >
-                STRATON
+                STRATORA CONSULTING
               </span>
             </Link>
 

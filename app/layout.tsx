@@ -5,12 +5,12 @@ import Footer from '@/components/layout/Footer';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://straton.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://stratoraconsulting.com'),
   title: {
-    default: 'Straton | Programme Delivery & Transformation Consulting',
-    template: '%s | Straton',
+    default: 'Stratora Consulting | Programme Delivery & Transformation Consulting',
+    template: '%s | Stratora Consulting',
   },
-  description: 'Straton is a delivery-focused partnership helping organisations deliver complex ERP and transformation programmes with clarity, structure, and control.',
+  description: 'Stratora Consulting is a delivery-focused partnership helping organisations deliver complex ERP and transformation programmes with clarity, structure, and control.',
   keywords: [
     'programme delivery',
     'ERP implementation',
@@ -18,26 +18,26 @@ export const metadata: Metadata = {
     'go-live readiness',
     'programme governance',
   ],
-  authors: [{ name: 'Straton' }],
+  authors: [{ name: 'Stratora Consulting' }],
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://straton.com',
-    siteName: 'Straton',
-    title: 'Straton | Programme Delivery & Transformation Consulting',
+    url: 'https://stratoraconsulting.com',
+    siteName: 'Stratora Consulting',
+    title: 'Stratora Consulting | Programme Delivery & Transformation Consulting',
     description: 'Clarity where others see complexity. We help organisations deliver complex programmes with structure, control, and confidence.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Straton',
+        alt: 'Stratora Consulting',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Straton | Programme Delivery',
+    title: 'Stratora Consulting | Programme Delivery',
     description: 'Delivery-focused partnership for ERP and transformation programmes.',
   },
   robots: {
@@ -45,16 +45,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://straton.com',
+    canonical: 'https://stratoraconsulting.com',
   },
 };
 
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Straton',
-  url: 'https://straton.com',
-  email: 'hello@straton.com',
+  name: 'Stratora Consulting',
+  url: 'https://stratoraconsulting.com',
+  email: 'hello@stratoraconsulting.com',
   description: 'Delivery-focused partnership for ERP and transformation programmes',
   founder: [
     {

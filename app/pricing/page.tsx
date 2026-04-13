@@ -253,10 +253,10 @@ export default function PricingPage() {
             <p className="text-[14px] text-[#A89F91] mt-6">
               Or email us at{' '}
               <a
-                href="mailto:hello@straton.com"
+                href="mailto:hello@stratoraconsulting.com"
                 className="hover:text-[#2F5D62] transition-colors"
               >
-                hello@straton.com
+                hello@stratoraconsulting.com
               </a>
             </p>
           </AnimatedSection>

@@ -7,8 +7,8 @@ import { teamMember } from './sanity/schemas/teamMember';
 import { siteSettings } from './sanity/schemas/siteSettings';
 
 export default defineConfig({
-  name: 'straton',
-  title: 'Straton CMS',
+  name: 'stratora-consulting',
+  title: 'Stratora Consulting CMS',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'placeholder',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   basePath: '/studio',

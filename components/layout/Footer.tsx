@@ -39,10 +39,10 @@ export default function Footer() {
                 />
               </svg>
               <span
-                className="font-display text-[15px] tracking-[0.25em] text-white font-medium"
-                style={{ letterSpacing: '0.25em' }}
+                className="font-display text-[12px] tracking-[0.2em] text-white font-medium uppercase"
+                style={{ letterSpacing: '0.2em' }}
               >
-                STRATON
+                STRATORA CONSULTING
               </span>
             </Link>
             <p className="text-[13px] text-[#A89F91] mb-2">Delivery partnership led by</p>
@@ -77,10 +77,10 @@ export default function Footer() {
             </div>
             <div className="space-y-3">
               <a
-                href="mailto:hello@straton.com"
+                href="mailto:hello@stratoraconsulting.com"
                 className="text-[14px] text-[#A89F91] hover:text-[#2F5D62] transition-colors duration-150 block"
               >
-                hello@straton.com
+                hello@stratoraconsulting.com
               </a>
               <a
                 href="/contact"
@@ -113,7 +113,7 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-[#1E1E1E]">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <p className="text-[13px] text-[#525250]">
-              © 2025 Straton · straton.com
+              © 2025 Stratora Consulting · stratoraconsulting.com
             </p>
             <p className="text-[13px] italic text-[#525250]">
               Programme delivery. Digital execution. Controlled outcomes.
