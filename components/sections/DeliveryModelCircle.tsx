@@ -5,14 +5,14 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
 
 const phases = [
-  { id: 1, title: 'Define', description: 'Understand the objective', icon: '🎯' },
-  { id: 2, title: 'Structure', description: 'Plan the work', icon: '📋' },
-  { id: 3, title: 'Design', description: 'Define the solution', icon: '✏️' },
-  { id: 4, title: 'Deliver', description: 'Execute with control', icon: '⚙️' },
-  { id: 5, title: 'Validate', description: 'Ensure quality', icon: '✓' },
-  { id: 6, title: 'Deploy', description: 'Go live with confidence', icon: '🚀' },
-  { id: 7, title: 'Stabilise', description: 'Resolve and optimise', icon: '📈' },
-  { id: 8, title: 'Close', description: 'Complete and learn', icon: '✔' },
+  { id: 1, title: 'Define', description: 'Understand the objective', angle: 0 },
+  { id: 2, title: 'Structure', description: 'Plan the work', angle: 45 },
+  { id: 3, title: 'Design', description: 'Define the solution', angle: 90 },
+  { id: 4, title: 'Deliver', description: 'Execute with control', angle: 135 },
+  { id: 5, title: 'Validate', description: 'Ensure quality', angle: 180 },
+  { id: 6, title: 'Deploy', description: 'Go live with confidence', angle: 225 },
+  { id: 7, title: 'Stabilise', description: 'Resolve and optimise', angle: 270 },
+  { id: 8, title: 'Close', description: 'Complete and learn', angle: 315 },
 ];
 
 export default function DeliveryModelCircle() {
@@ -20,171 +20,126 @@ export default function DeliveryModelCircle() {
 
   return (
     <section className="bg-[#0F1113] py-[160px] overflow-hidden">
-      <div className="container-custom">
+      <div className="container-custom max-w-6xl">
         <AnimatedSection>
-          <div className="mb-12 text-center">
-            <div className="flex justify-center">
-              <SectionLabel light>OUR DELIVERY MODEL</SectionLabel>
+          {/* Header */}
+          <div className="text-center mb-20">
+            <div className="mb-6 flex justify-center">
+              <SectionLabel light>APPROACH</SectionLabel>
             </div>
+            <h2 className="font-display text-[48px] text-white mb-4 leading-[1.2]">
+              Our Delivery Model
+            </h2>
+            <p className="text-[18px] text-[#A89F91] max-w-2xl mx-auto">
+              A clear, structured approach from start to finish.
+            </p>
           </div>
 
-          {/* Circular Diagram */}
-          <div className="relative max-w-4xl mx-auto">
-            {/* SVG Circle */}
-            <svg
-              viewBox="0 0 800 800"
-              className="w-full h-auto"
-              style={{ filter: 'drop-shadow(0 0 40px rgba(47, 93, 98, 0.3))' }}
-            >
-              <defs>
-                {/* Gradient for the circle */}
-                <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#2F5D62" stopOpacity="0.8" />
-                  <stop offset="100%" stopColor="#2F5D62" stopOpacity="0.4" />
-                </linearGradient>
-              </defs>
-
-              {/* Outer circle */}
-              <circle
-                cx="400"
-                cy="400"
-                r="320"
-                fill="none"
-                stroke="url(#circleGradient)"
-                strokeWidth="2"
-                opacity="0.6"
-              />
-
-              {/* Inner circle */}
-              <circle
-                cx="400"
-                cy="400"
-                r="200"
-                fill="none"
-                stroke="#2F5D62"
-                strokeWidth="1"
-                opacity="0.3"
-              />
-
-              {/* Segment dividers */}
-              {phases.map((_, index) => {
-                const angle = (index * 360) / 8 - 90;
-                const radian = (angle * Math.PI) / 180;
-                const x1 = 400 + 200 * Math.cos(radian);
-                const y1 = 400 + 200 * Math.sin(radian);
-                const x2 = 400 + 320 * Math.cos(radian);
-                const y2 = 400 + 320 * Math.sin(radian);
-
-                return (
-                  <line
-                    key={index}
-                    x1={x1}
-                    y1={y1}
-                    x2={x2}
-                    y2={y2}
-                    stroke="#2F5D62"
-                    strokeWidth="1"
-                    opacity="0.4"
-                  />
-                );
-              })}
-
-              {/* Phase dots on outer circle */}
-              {phases.map((phase, index) => {
-                const angle = (index * 360) / 8 - 90;
-                const radian = (angle * Math.PI) / 180;
-                const x = 400 + 320 * Math.cos(radian);
-                const y = 400 + 320 * Math.sin(radian);
-
-                return (
-                  <circle
-                    key={phase.id}
-                    cx={x}
-                    cy={y}
-                    r="8"
-                    fill="#2F5D62"
-                    opacity={hoveredPhase === phase.id ? 1 : 0.7}
-                    style={{ transition: 'all 0.3s ease' }}
-                  />
-                );
-              })}
-
-              {/* Center text */}
-              <text
-                x="400"
-                y="390"
-                textAnchor="middle"
-                fill="white"
-                fontSize="32"
-                fontFamily="Playfair Display, serif"
-                fontWeight="500"
+          {/* Phases Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {phases.map((phase, index) => (
+              <div
+                key={phase.id}
+                className="relative group cursor-pointer"
+                onMouseEnter={() => setHoveredPhase(phase.id)}
+                onMouseLeave={() => setHoveredPhase(null)}
               >
-                Our Delivery Model
-              </text>
-              <text
-                x="400"
-                y="425"
-                textAnchor="middle"
-                fill="#A89F91"
-                fontSize="14"
-                fontFamily="Inter, sans-serif"
-              >
-                A clear, structured approach
-              </text>
-              <text
-                x="400"
-                y="445"
-                textAnchor="middle"
-                fill="#A89F91"
-                fontSize="14"
-                fontFamily="Inter, sans-serif"
-              >
-                from start to finish.
-              </text>
-            </svg>
-
-            {/* Phase labels positioned around the circle */}
-            <div className="absolute inset-0">
-              {phases.map((phase, index) => {
-                const angle = (index * 360) / 8 - 90;
-                const radian = (angle * Math.PI) / 180;
-                
-                // Position labels outside the circle
-                const distance = 380;
-                const x = 50 + (distance * Math.cos(radian) + 400) / 8;
-                const y = 50 + (distance * Math.sin(radian) + 400) / 8;
-
-                return (
-                  <div
-                    key={phase.id}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer transition-all duration-300"
-                    style={{
-                      left: `${x}%`,
-                      top: `${y}%`,
-                      opacity: hoveredPhase === null || hoveredPhase === phase.id ? 1 : 0.5,
-                    }}
-                    onMouseEnter={() => setHoveredPhase(phase.id)}
-                    onMouseLeave={() => setHoveredPhase(null)}
-                  >
-                    <div className="mb-2">
-                      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#2F5D62] text-white text-xs font-medium">
-                        {String(phase.id).padStart(2, '0')}
-                      </span>
-                    </div>
-                    <h3 className="font-display text-[18px] text-white mb-1">
-                      {phase.title}
-                    </h3>
-                    <p className="text-[13px] text-[#A89F91] max-w-[120px] mx-auto">
-                      {phase.description}
-                    </p>
+                <div
+                  className={`
+                    bg-[#1A1A1A] border border-[#2F5D62] p-6 transition-all duration-300
+                    ${hoveredPhase === phase.id ? 'bg-[#2F5D62] border-[#2F5D62] transform scale-105' : ''}
+                    ${hoveredPhase !== null && hoveredPhase !== phase.id ? 'opacity-50' : ''}
+                  `}
+                >
+                  {/* Phase Number */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span
+                      className={`
+                        inline-flex items-center justify-center w-10 h-10 rounded-full 
+                        border-2 text-sm font-medium transition-colors duration-300
+                        ${hoveredPhase === phase.id 
+                          ? 'border-white text-white' 
+                          : 'border-[#2F5D62] text-[#2F5D62]'
+                        }
+                      `}
+                    >
+                      {String(phase.id).padStart(2, '0')}
+                    </span>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className={`transition-all duration-300 ${
+                        hoveredPhase === phase.id ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2'
+                      }`}
+                    >
+                      <path
+                        d="M7 3L14 10L7 17"
+                        stroke="white"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </div>
-                );
-              })}
+
+                  {/* Phase Title */}
+                  <h3
+                    className={`
+                      font-display text-[24px] mb-2 transition-colors duration-300
+                      ${hoveredPhase === phase.id ? 'text-white' : 'text-white'}
+                    `}
+                  >
+                    {phase.title}
+                  </h3>
+
+                  {/* Phase Description */}
+                  <p
+                    className={`
+                      text-[14px] leading-[1.6] transition-colors duration-300
+                      ${hoveredPhase === phase.id ? 'text-white opacity-90' : 'text-[#A89F91]'}
+                    `}
+                  >
+                    {phase.description}
+                  </p>
+
+                  {/* Connector Arrow (except for last item in row) */}
+                  {index % 4 !== 3 && (
+                    <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M9 6L15 12L9 18"
+                          stroke="#2F5D62"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Flow Indicator */}
+          <div className="flex items-center justify-center gap-3 mb-12">
+            <div className="flex items-center gap-2">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                <div
+                  key={num}
+                  className={`
+                    w-2 h-2 rounded-full transition-all duration-300
+                    ${hoveredPhase === num ? 'bg-[#2F5D62] w-8' : 'bg-[#2F5D62] opacity-40'}
+                  `}
+                />
+              ))}
             </div>
           </div>
 
-          {/* Bottom text */}
-          <div className="text-center mt-20">
+          {/* Bottom Text */}
+          <div className="text-center">
             <p className="text-[15px] text-[#A89F91] italic">
               Every phase is controlled. Nothing is left unclear.
             </p>
