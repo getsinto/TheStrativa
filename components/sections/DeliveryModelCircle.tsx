@@ -26,8 +26,8 @@ export default function DeliveryModelCircle() {
             <div className="mb-8 flex justify-center">
               <SectionLabel light>OUR DELIVERY MODEL</SectionLabel>
             </div>
-            <h2 className="font-display text-[42px] text-white mb-4">
-              A clear, structured approach from start to finish.
+            <h2 className="font-display text-[42px] text-white mb-4 leading-[1.3]">
+              A clear, structured approach<br />from start to finish.
             </h2>
           </div>
 

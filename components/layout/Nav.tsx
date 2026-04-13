@@ -81,12 +81,14 @@ export default function Nav() {
                   fill="none"
                 />
               </svg>
-              <span
-                className="font-display text-[12px] tracking-[0.2em] text-[#0F1113] font-medium uppercase"
-                style={{ letterSpacing: '0.2em' }}
-              >
-                STRATORA CONSULTING
-              </span>
+              <div className="flex flex-col">
+                <span className="font-display text-[11px] tracking-[0.15em] text-[#0F1113] font-medium uppercase leading-tight">
+                  STRATORA
+                </span>
+                <span className="font-display text-[9px] tracking-[0.15em] text-[#525250] font-normal uppercase leading-tight">
+                  CONSULTING
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}

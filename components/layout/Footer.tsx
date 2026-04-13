@@ -38,12 +38,14 @@ export default function Footer() {
                   fill="none"
                 />
               </svg>
-              <span
-                className="font-display text-[12px] tracking-[0.2em] text-white font-medium uppercase"
-                style={{ letterSpacing: '0.2em' }}
-              >
-                STRATORA CONSULTING
-              </span>
+              <div className="flex flex-col">
+                <span className="font-display text-[11px] tracking-[0.15em] text-white font-medium uppercase leading-tight">
+                  STRATORA
+                </span>
+                <span className="font-display text-[9px] tracking-[0.15em] text-[#A89F91] font-normal uppercase leading-tight">
+                  CONSULTING
+                </span>
+              </div>
             </Link>
             <p className="text-[13px] text-[#A89F91] mb-2">Delivery partnership led by</p>
             <p className="font-display text-[15px] text-white">

@@ -44,12 +44,14 @@ export default function HomePage() {
                 fill="none"
               />
             </svg>
-            <span
-              className="font-display text-[13px] tracking-[0.25em] text-white font-medium uppercase"
-              style={{ letterSpacing: '0.25em' }}
-            >
-              STRATORA CONSULTING
-            </span>
+            <div className="flex flex-col items-center">
+              <span className="font-display text-[14px] tracking-[0.25em] text-white font-medium uppercase leading-tight">
+                STRATORA
+              </span>
+              <span className="font-display text-[11px] tracking-[0.25em] text-white opacity-70 font-normal uppercase leading-tight">
+                CONSULTING
+              </span>
+            </div>
           </div>
 
           {/* Horizontal rule */}
