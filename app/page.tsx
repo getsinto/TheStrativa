@@ -217,19 +217,11 @@ export default function HomePage() {
             <div className="bg-white border border-[#E5E7EB] grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:shadow-card-hover transition-shadow duration-300">
               {/* Image */}
               <div className="bg-gradient-to-br from-[#F8F9FA] to-[#E5E7EB] h-64 lg:h-auto relative overflow-hidden">
-                {/* If you have a case study image, add it here */}
-                {/* <img 
-                  src="/images/cases/case-study-erp.jpg" 
+                <img 
+                  src="/images/cases/case.jpg" 
                   alt="ERP Programme Closure"
                   className="w-full h-full object-cover"
-                /> */}
-                
-                {/* Placeholder design */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 border-2 border-[#2F5D62] opacity-20 rounded-full" />
-                  </div>
-                </div>
+                />
               </div>
 
               {/* Content */}
