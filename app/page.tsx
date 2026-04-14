@@ -2,7 +2,7 @@ import Link from 'next/link';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
 import Button from '@/components/ui/Button';
-import DeliveryModelCircle from '@/components/sections/DeliveryModelCircle';
+import DeliveryWheel from '@/components/sections/DeliveryWheel';
 
 export const metadata = {
   title: 'Clarity Where Others See Complexity',
@@ -382,8 +382,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 6 — DELIVERY MODEL CIRCLE */}
-      <DeliveryModelCircle />
+      {/* SECTION 6 — DELIVERY WHEEL */}
+      <DeliveryWheel />
 
       {/* SECTION 7 — CLOSING CTA */}
       <section className="bg-[#F7F6F3] py-[160px]">

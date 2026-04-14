@@ -2,62 +2,14 @@ import Link from 'next/link';
 import { createClient } from '@sanity/client';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
+import { STATIC_CASE_STUDIES } from '@/lib/caseStudiesData';
 
 export const metadata = {
   title: 'Case Studies',
-  description: 'Real programme delivery work by The Strativa. ERP closure, go-live readiness, lessons learned — controlled outcomes across complex programmes.',
+  description: 'Real programme delivery work by Stratora Consulting. ERP closure, go-live readiness, lessons learned — controlled outcomes across complex programmes.',
 };
 
 export const revalidate = 3600;
-
-const STATIC_CASE_STUDIES = [
-  {
-    _id: '1',
-    title: 'ERP Programme Closure',
-    subtitle: 'A complex ERP programme brought to a controlled, credible closure.',
-    slug: { current: 'erp-programme-closure' },
-    situation: 'A major ERP programme involving multiple suppliers had reached its final stages without a clear understanding of delivery status.',
-    problem: [
-      'Multiple suppliers.',
-      'Unresolved issues.',
-      'No clear closure position.',
-      'Different stakeholders held different views of reality.',
-      'Delivery had taken place, but clarity had not.',
-    ],
-    publishedAt: '2024-09-01',
-    featured: true,
-  },
-  {
-    _id: '2',
-    title: 'Lessons Learned & Survey Design',
-    subtitle: 'From unclear feedback to structured, usable insight.',
-    slug: { current: 'lessons-learned-survey-design' },
-    situation: 'Stakeholder feedback was required to capture lessons learned across the programme.',
-    problem: [
-      'Feedback was inconsistent.',
-      'Scoring was unclear.',
-      'Questions were open to interpretation.',
-      'The data could not be trusted to support decision-making.',
-    ],
-    publishedAt: '2024-06-01',
-    featured: false,
-  },
-  {
-    _id: '3',
-    title: 'Go-Live Readiness',
-    subtitle: 'A complex go-live decision made with clarity and control.',
-    slug: { current: 'go-live-readiness' },
-    situation: 'Multiple workstreams were approaching go-live at different levels of readiness.',
-    problem: [
-      'No single view of readiness.',
-      'Different stakeholders held different positions.',
-      'Risks were not clearly understood or aligned.',
-      'Go-live risked becoming a decision based on pressure, not clarity.',
-    ],
-    publishedAt: '2024-03-01',
-    featured: false,
-  },
-];
 
 async function getCaseStudies() {
   try {
@@ -151,7 +103,7 @@ export default async function CaseStudiesPage() {
                       className="text-[15px] text-[#525250] leading-[1.7] mb-6 flex-1"
                       style={{
                         display: '-webkit-box',
-                        WebkitLineClamp: 2,
+                        WebkitLineClamp: 3,
                         WebkitBoxOrient: 'vertical',
                         overflow: 'hidden',
                       }}
