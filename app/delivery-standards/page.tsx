@@ -2,6 +2,7 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
 import Divider from '@/components/ui/Divider';
 import Button from '@/components/ui/Button';
+import DeliveryWheel from '@/components/sections/DeliveryWheel';
 
 export const metadata = {
   title: 'Delivery Standards',
@@ -188,6 +189,9 @@ export default function DeliveryStandardsPage() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* DELIVERY WHEEL */}
+      <DeliveryWheel />
 
       {/* FINAL STATEMENT */}
       <section className="bg-[#0F1113] py-[120px]">

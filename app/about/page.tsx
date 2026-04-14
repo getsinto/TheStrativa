@@ -1,9 +1,10 @@
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
+import DeliveryWheel from '@/components/sections/DeliveryWheel';
 
 export const metadata = {
   title: 'About',
-  description: 'The Strativa is a delivery-focused partnership led by Olusegun Olamide and Hiram Kanwal, combining programme expertise with digital capability.',
+  description: 'Stratora Consulting is a delivery-focused partnership led by Olusegun Olamide and Hiram Kanwal, combining programme expertise with digital capability.',
 };
 
 export const revalidate = 3600;
@@ -70,7 +71,7 @@ export default function AboutPage() {
             className="mb-8 animate-fadeUp"
             style={{ animationDelay: '0ms', animationFillMode: 'both' }}
           >
-            <SectionLabel light>ABOUT STRATIVA</SectionLabel>
+            <SectionLabel light>ABOUT STRATORA CONSULTING</SectionLabel>
           </div>
 
           <h1
@@ -98,8 +99,55 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 2 — WHO WE ARE */}
+      {/* SECTION 2 — LEADERSHIP (MOVED TO TOP) */}
       <section className="bg-[#F7F6F3] py-[120px]">
+        <div className="container-custom">
+          <AnimatedSection>
+            <div className="mb-6">
+              <SectionLabel>LEADERSHIP</SectionLabel>
+            </div>
+            <h2 className="font-display text-[38px] text-[#0F1113] leading-[1.2] mb-16">
+              The partnership.
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {leaders.map((leader, index) => (
+                <AnimatedSection key={leader.name} delay={index * 150}>
+                  <div className="border border-[#E8E6E1] p-12">
+                    {/* Monogram */}
+                    <div className="w-20 h-20 rounded-full border border-[#E8E6E1] flex items-center justify-center mb-6">
+                      <span className="font-display text-[28px] text-[#2F5D62]">
+                        {leader.initial}
+                      </span>
+                    </div>
+
+                    {/* Name */}
+                    <h3 className="font-display text-[24px] text-[#0F1113]">
+                      {leader.name}
+                    </h3>
+
+                    {/* Role */}
+                    <p className="text-[13px] text-[#2F5D62] uppercase tracking-widest mt-1">
+                      {leader.role}
+                    </p>
+
+                    {/* Divider */}
+                    <div className="h-[1px] bg-[#E8E6E1] my-6" />
+
+                    {/* Description */}
+                    <p className="text-[15px] text-[#525250] leading-[1.7]">
+                      {leader.description}
+                    </p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* SECTION 3 — WHO WE ARE */}
+      <section className="bg-[#EEECEA] py-[120px]">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-12 lg:gap-16">
             {/* Left Column - Sticky */}
@@ -131,7 +179,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 3 — WHAT MAKES US DIFFERENT */}
+      {/* SECTION 4 — WHAT MAKES US DIFFERENT */}
       <section className="bg-[#0F1113] py-[120px]">
         <div className="container-custom">
           <AnimatedSection>
@@ -180,7 +228,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4 — HOW WE WORK */}
+      {/* SECTION 5 — HOW WE WORK */}
       <section className="bg-[#F7F6F3] py-[120px]">
         <div className="container-custom">
           <AnimatedSection>
@@ -209,54 +257,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5 — LEADERSHIP */}
-      <section className="bg-[#F7F6F3] pt-20 pb-[120px]">
-        <div className="container-custom">
-          <AnimatedSection>
-            <div className="mb-6">
-              <SectionLabel>LEADERSHIP</SectionLabel>
-            </div>
-            <h2 className="font-display text-[38px] text-[#0F1113] leading-[1.2] mb-16">
-              The partnership.
-            </h2>
+      {/* SECTION 6 — DELIVERY WHEEL */}
+      <DeliveryWheel />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {leaders.map((leader, index) => (
-                <AnimatedSection key={leader.name} delay={index * 150}>
-                  <div className="border border-[#E8E6E1] p-12">
-                    {/* Monogram */}
-                    <div className="w-20 h-20 rounded-full border border-[#E8E6E1] flex items-center justify-center mb-6">
-                      <span className="font-display text-[28px] text-[#2F5D62]">
-                        {leader.initial}
-                      </span>
-                    </div>
-
-                    {/* Name */}
-                    <h3 className="font-display text-[24px] text-[#0F1113]">
-                      {leader.name}
-                    </h3>
-
-                    {/* Role */}
-                    <p className="text-[13px] text-[#2F5D62] uppercase tracking-widest mt-1">
-                      {leader.role}
-                    </p>
-
-                    {/* Divider */}
-                    <div className="h-[1px] bg-[#E8E6E1] my-6" />
-
-                    {/* Description */}
-                    <p className="text-[15px] text-[#525250] leading-[1.7]">
-                      {leader.description}
-                    </p>
-                  </div>
-                </AnimatedSection>
-              ))}
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* SECTION 6 — CLOSING STATEMENT */}
+      {/* SECTION 7 — CLOSING STATEMENT */}
       <section className="bg-[#0F1113] py-[100px]">
         <div className="container-custom max-w-4xl text-center">
           <AnimatedSection>
@@ -267,7 +271,7 @@ export default function AboutPage() {
               "We do not aim to make programmes look good. We aim to make them work."
             </blockquote>
             <p className="text-[13px] text-[#A89F91] tracking-[0.1em] uppercase">
-              DELIVERY PARTNERSHIP · THESTRATIVA.COM
+              DELIVERY PARTNERSHIP · STRATORACONSULTING.COM
             </p>
           </AnimatedSection>
         </div>
