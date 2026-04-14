@@ -86,8 +86,14 @@ export default function DeliveryWheel() {
   };
 
   return (
-    <section className="bg-[#F8F9FA] py-[140px] overflow-hidden">
-      <div className="container-custom max-w-6xl">
+    <section className="relative bg-[#EEEEEE] py-[140px] overflow-hidden">
+      {/* McKinsey-style subtle background pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container-custom max-w-6xl relative z-10">
         <AnimatedSection>
           {/* Header */}
           <div className="text-center mb-16">
