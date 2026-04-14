@@ -61,37 +61,13 @@ export default function HomePage() {
             {/* Right: Hero Visual Area */}
             <div className="hidden lg:block animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <div className="relative">
-                {/* Professional placeholder with subtle pattern */}
+                {/* Hero Image */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-[#F8F9FA] via-white to-[#E5E7EB] rounded-lg overflow-hidden border border-[#E5E7EB] relative">
-                  {/* Add your hero image here: public/images/hero-consulting.jpg */}
-                  {/* <img 
-                    src="/images/hero-consulting.jpg" 
+                  <img 
+                    src="/images/cases/hero-consulting.jpg" 
                     alt="Professional programme delivery"
                     className="w-full h-full object-cover"
-                  /> */}
-                  
-                  {/* Elegant placeholder design */}
-                  <div className="absolute inset-0 flex items-center justify-center p-12">
-                    <div className="text-center">
-                      {/* Geometric pattern */}
-                      <div className="relative w-48 h-48 mx-auto mb-6">
-                        <div className="absolute inset-0 border-4 border-[#2F5D62] opacity-10 rounded-full" />
-                        <div className="absolute inset-4 border-4 border-[#2F5D62] opacity-15 rounded-full" />
-                        <div className="absolute inset-8 border-4 border-[#2F5D62] opacity-20 rounded-full" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="text-[#2F5D62] opacity-30">
-                            <svg className="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <p className="text-[#6B7280] text-xs font-medium">
-                        Add your hero image to<br />
-                        <code className="text-[#2F5D62]">/public/images/hero-consulting.jpg</code>
-                      </p>
-                    </div>
-                  </div>
+                  />
                 </div>
                 
                 {/* Decorative accents */}
@@ -213,9 +189,9 @@ export default function HomePage() {
             <div className="bg-white border border-[#E5E7EB] grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:shadow-card-hover transition-shadow duration-300">
               {/* Image */}
               <div className="bg-gradient-to-br from-[#F8F9FA] to-[#E5E7EB] h-64 lg:h-auto relative overflow-hidden">
-                {/* Uncomment when you have an image */}
+                {/* If you have a case study image, add it here */}
                 {/* <img 
-                  src="/images/case-study-erp.jpg" 
+                  src="/images/cases/case-study-erp.jpg" 
                   alt="ERP Programme Closure"
                   className="w-full h-full object-cover"
                 /> */}
@@ -224,10 +200,6 @@ export default function HomePage() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="w-32 h-32 mx-auto mb-4 border-2 border-[#2F5D62] opacity-20 rounded-full" />
-                    <p className="text-[#6B7280] text-sm">
-                      Add case study image:<br />
-                      /images/case-study-erp.jpg
-                    </p>
                   </div>
                 </div>
               </div>
