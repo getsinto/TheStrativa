@@ -86,11 +86,15 @@ export default function DeliveryWheel() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-[#003D5C] via-[#004B73] to-[#0066A1] py-[140px] overflow-hidden">
-      {/* Subtle pattern overlay for depth */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#0080C8] rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-[#002D44] rounded-full blur-3xl" />
+    <section className="relative bg-[#F8F9FA] py-[140px] overflow-hidden">
+      {/* Subtle radial gradient background - professional and clean */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F9FA] via-[#EEEFF1] to-[#F8F9FA]" />
+        {/* Soft glow effect behind wheel area */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#2F5D62] opacity-[0.03] rounded-full blur-3xl" />
+        {/* Subtle corner accents */}
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-to-br from-[#2F5D62]/5 to-transparent rounded-full blur-2xl" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-[#2F5D62]/5 to-transparent rounded-full blur-2xl" />
       </div>
       
       <div className="container-custom max-w-6xl relative z-10">
@@ -98,14 +102,14 @@ export default function DeliveryWheel() {
           {/* Header */}
           <div className="text-center mb-16">
             <div className="mb-6 flex justify-center">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-white/70">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
                 Approach
               </p>
             </div>
-            <h2 className="font-display text-[clamp(36px,5vw,52px)] text-white mb-6 leading-[1.1] font-semibold">
+            <h2 className="font-display text-[clamp(36px,5vw,52px)] text-[#0F1113] mb-6 leading-[1.1] font-semibold">
               A clear, structured approach to delivery.
             </h2>
-            <p className="text-[18px] text-white/80">
+            <p className="text-[18px] text-[#6B7280]">
               Eight phases. Fully controlled from start to finish.
             </p>
           </div>
@@ -350,18 +354,18 @@ export default function DeliveryWheel() {
 
           {/* Bottom statement */}
           <div className="text-center mb-12">
-            <p className="text-[17px] text-white font-semibold mb-8">
+            <p className="text-[17px] text-[#0F1113] font-semibold mb-8">
               Every phase is controlled. Nothing is left to chance.
             </p>
             <div className="flex flex-col items-center gap-4">
               <Button href="/contact" variant="primary">
                 Start a conversation
               </Button>
-              <p className="text-[14px] text-white/70">
+              <p className="text-[14px] text-[#6B7280]">
                 Or email us at{' '}
                 <a
                   href="mailto:hello@stratoraconsulting.com"
-                  className="text-white hover:text-white/90 font-semibold transition-colors underline"
+                  className="text-[#2F5D62] hover:text-[#1E3D40] font-semibold transition-colors"
                 >
                   hello@stratoraconsulting.com
                 </a>
