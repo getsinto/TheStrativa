@@ -9,22 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Original colors (keeping for compatibility)
-        charcoal: '#0F1113',
-        offwhite: '#F7F6F3',
-        teal: {
-          DEFAULT: '#2F5D62',
-          light: '#3D7A81',
-          dark: '#1E3D40',
-        },
-        bronze: '#A89F91',
-        mist: '#E8E6E1',
-        // McKinsey design system colors
+        // McKinsey-inspired palette
         navy: {
           DEFAULT: '#003366',
           dark: '#002244',
           light: '#004488',
         },
+        charcoal: '#1A1A1A',
         steel: {
           DEFAULT: '#6B7280',
           light: '#9CA3AF',
@@ -42,6 +33,11 @@ const config: Config = {
           800: '#1F2937',
           900: '#111827',
         },
+        teal: {
+          DEFAULT: '#0EA5E9',
+          light: '#38BDF8',
+          dark: '#0284C7',
+        },
       },
       fontFamily: {
         display: ['Playfair Display', 'Georgia', 'serif'],
@@ -51,9 +47,8 @@ const config: Config = {
         // McKinsey typography scale
         'hero': ['72px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
         'h1': ['48px', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '600' }],
-        'h2': ['36px', { lineHeight: '1.3', letterSpacing: '0', fontWeight: '600' }],
+        'h2': ['32px', { lineHeight: '1.3', letterSpacing: '0', fontWeight: '600' }],
         'h3': ['24px', { lineHeight: '1.4', letterSpacing: '0', fontWeight: '600' }],
-        'h4': ['20px', { lineHeight: '1.5', letterSpacing: '0', fontWeight: '600' }],
         'body-lg': ['20px', { lineHeight: '1.7', letterSpacing: '0', fontWeight: '400' }],
         'body': ['17px', { lineHeight: '1.8', letterSpacing: '0', fontWeight: '400' }],
         'body-sm': ['15px', { lineHeight: '1.6', letterSpacing: '0', fontWeight: '400' }],
@@ -76,22 +71,12 @@ const config: Config = {
         'wide': '900px',
       },
       animation: {
-        fadeUp: 'fadeUp 0.6s ease forwards',
         'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards',
         'fade-in': 'fadeIn 0.4s ease-out forwards',
         'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+        'border-slide': 'borderSlide 0.4s ease-in-out forwards',
       },
       keyframes: {
-        fadeUp: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(24px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
         fadeInUp: {
           '0%': {
             opacity: '0',
@@ -116,14 +101,18 @@ const config: Config = {
             transform: 'translateX(0)',
           },
         },
+        borderSlide: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+      },
+      transitionTimingFunction: {
+        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       boxShadow: {
         'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
         'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
         'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
-      },
-      transitionTimingFunction: {
-        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
     },
   },

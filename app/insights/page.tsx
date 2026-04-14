@@ -76,61 +76,45 @@ export default async function InsightsPage() {
 
   return (
     <main className="pt-20">
-      {/* HERO */}
-      <section className="relative min-h-[50vh] bg-[#0F1113] flex items-center justify-center overflow-hidden">
-        {/* Grain texture overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
+      {/* HERO - McKinsey Style */}
+      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-4xl">
+        <div className="container-custom max-w-4xl text-center">
+          <div className="animate-fade-in-up">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
+              Insights
+            </p>
 
-        <div className="container-custom relative z-10 text-center max-w-4xl">
-          <h1
-            className="font-display text-white leading-[1.2] mb-6 animate-fadeUp"
-            style={{
-              fontSize: 'clamp(40px, 6vw, 64px)',
-              letterSpacing: '-0.02em',
-              animationDelay: '0ms',
-              animationFillMode: 'both',
-            }}
-          >
-            Thinking clearly about delivery.
-          </h1>
+            <h1 className="font-display text-[clamp(40px,6vw,64px)] text-[#0F1113] leading-[1.2] mb-6 font-semibold tracking-[-0.02em]">
+              Thinking clearly about delivery.
+            </h1>
 
-          <p
-            className="text-[18px] text-white opacity-65 animate-fadeUp"
-            style={{
-              animationDelay: '150ms',
-              animationFillMode: 'both',
-            }}
-          >
-            Points of view from the Strativa team.
-          </p>
+            <p className="text-[18px] text-[#6B7280] leading-[1.7]">
+              Points of view from the Stratora team.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* INSIGHTS GRID */}
-      <section className="bg-[#F7F6F3] py-[100px]">
+      {/* INSIGHTS GRID - McKinsey Style */}
+      <section className="bg-[#F8F9FA] py-4xl">
         <div className="container-custom max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {insights.map((insight: any, index: number) => (
               <AnimatedSection key={insight._id} delay={index * 100}>
                 <Link href={`/insights/${insight.slug.current}`}>
-                  <article className="group border border-[#E8E6E1] p-10 transition-all duration-200 hover:border-[#2F5D62] hover:-translate-y-1 h-full flex flex-col">
+                  <article className="group bg-white border border-[#E5E7EB] p-10 transition-all duration-200 hover:shadow-card-hover hover:border-[#2F5D62] h-full flex flex-col">
                     {/* Date */}
-                    <time className="text-[12px] text-[#A89F91] uppercase tracking-wider">
+                    <time className="text-[12px] text-[#6B7280] uppercase tracking-wider font-semibold">
                       {formatDate(insight.publishedAt)}
                     </time>
 
                     {/* Title */}
-                    <h2 className="font-display text-[26px] text-[#0F1113] mt-3 mb-4 leading-[1.3]">
+                    <h2 className="font-display text-[26px] text-[#0F1113] mt-3 mb-4 leading-[1.3] font-semibold">
                       {insight.title}
                     </h2>
 
                     {/* Summary */}
-                    <p className="text-[15px] text-[#525250] leading-[1.7] mb-4">
+                    <p className="text-[15px] text-[#6B7280] leading-[1.7] mb-4">
                       {insight.summary}
                     </p>
 
@@ -140,9 +124,9 @@ export default async function InsightsPage() {
                     </p>
 
                     {/* Bottom bar */}
-                    <div className="flex items-center justify-between pt-4 border-t border-[#E8E6E1]">
-                      <span className="text-[14px] text-[#2F5D62] flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
-                        Read
+                    <div className="flex items-center justify-between pt-4 border-t border-[#E5E7EB]">
+                      <span className="text-[14px] text-[#2F5D62] font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
+                        Read article
                         <span className="transition-transform duration-200 group-hover:translate-x-1">
                           →
                         </span>

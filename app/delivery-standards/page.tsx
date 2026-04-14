@@ -12,81 +12,68 @@ export const metadata = {
 export default function DeliveryStandardsPage() {
   return (
     <main className="pt-20">
-      {/* HERO */}
-      <section className="relative min-h-[50vh] bg-[#0F1113] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
+      {/* HERO - McKinsey Style */}
+      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-4xl">
+        <div className="container-custom max-w-4xl text-center">
+          <div className="animate-fade-in-up">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
+              Delivery Standards
+            </p>
 
-        <div className="container-custom relative z-10 text-center max-w-4xl">
-          <div className="mb-8 flex justify-center animate-fadeUp" style={{ animationDelay: '0ms', animationFillMode: 'both' }}>
-            <SectionLabel light>DELIVERY STANDARDS</SectionLabel>
+            <h1 className="font-display text-[clamp(40px,6vw,64px)] text-[#0F1113] leading-[1.2] mb-6 font-semibold tracking-[-0.02em]">
+              Stratora Consulting Delivery Standard
+            </h1>
+
+            <p className="text-[24px] text-[#2F5D62] font-display font-semibold">
+              Clarity. Structure. Delivery.
+            </p>
           </div>
-
-          <h1
-            className="font-display text-white leading-[1.2] mb-6 animate-fadeUp"
-            style={{
-              fontSize: 'clamp(40px, 6vw, 64px)',
-              letterSpacing: '-0.02em',
-              animationDelay: '100ms',
-              animationFillMode: 'both',
-            }}
-          >
-            Stratora Consulting Delivery Standard
-          </h1>
-
-          <p
-            className="text-[24px] text-white font-display animate-fadeUp"
-            style={{
-              animationDelay: '250ms',
-              animationFillMode: 'both',
-            }}
-          >
-            Clarity. Structure. Delivery.
-          </p>
         </div>
       </section>
 
-      {/* INTRODUCTION */}
-      <section className="bg-[#F7F6F3] py-[120px]">
+      {/* INTRODUCTION - McKinsey Style */}
+      <section className="bg-[#F8F9FA] py-4xl">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
-              <SectionLabel>INTRODUCTION</SectionLabel>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
+                Introduction
+              </p>
             </div>
-            <p className="text-[20px] text-[#0F1113] leading-[1.8] mb-6">
+            <p className="text-[20px] text-[#0F1113] leading-[1.8] mb-6 font-semibold">
               We work with organisations where delivery is complex, unclear, or at risk.
             </p>
-            <p className="text-[17px] text-[#525250] leading-[1.8]">
+            <p className="text-[17px] text-[#6B7280] leading-[1.8]">
               Our role is to bring clarity, structure, and control.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* HOW WE WORK */}
-      <section className="bg-[#EEECEA] py-[120px]">
+      {/* HOW WE WORK - McKinsey Style */}
+      <section className="bg-white py-4xl">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
-              <SectionLabel>HOW WE WORK</SectionLabel>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
+                How we work
+              </p>
             </div>
-            <p className="font-display italic text-[28px] text-[#0F1113] leading-[1.4]">
+            <p className="font-display italic text-[28px] text-[#0F1113] leading-[1.4] font-semibold">
               Everything is defined. Everything is visible. Everything is controlled.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* WHAT YOU CAN EXPECT */}
-      <section className="bg-[#F7F6F3] py-[120px]">
+      {/* WHAT YOU CAN EXPECT - McKinsey Style */}
+      <section className="bg-[#F8F9FA] py-4xl">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
-              <SectionLabel>WHAT YOU CAN EXPECT</SectionLabel>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
+                What you can expect
+              </p>
             </div>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -110,30 +97,32 @@ export default function DeliveryStandardsPage() {
         </div>
       </section>
 
-      {/* OUR STANDARDS */}
-      <section className="bg-[#0F1113] py-[120px]">
+      {/* OUR STANDARDS - McKinsey Style */}
+      <section className="bg-white py-4xl">
         <div className="container-custom max-w-4xl">
           <AnimatedSection>
-            <div className="mb-12 flex justify-center">
-              <SectionLabel light>OUR STANDARDS</SectionLabel>
+            <div className="mb-12 text-center">
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
+                Our standards
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <h3 className="font-display text-[28px] text-white mb-4">Clarity</h3>
-                <p className="text-[15px] text-white opacity-70">
+              <div className="text-center border border-[#E5E7EB] p-8 hover:shadow-card-hover transition-shadow duration-200">
+                <h3 className="font-display text-[28px] text-[#0F1113] mb-4 font-semibold">Clarity</h3>
+                <p className="text-[15px] text-[#6B7280]">
                   Everything must be understood.
                 </p>
               </div>
-              <div className="text-center">
-                <h3 className="font-display text-[28px] text-white mb-4">Structure</h3>
-                <p className="text-[15px] text-white opacity-70">
+              <div className="text-center border border-[#E5E7EB] p-8 hover:shadow-card-hover transition-shadow duration-200">
+                <h3 className="font-display text-[28px] text-[#0F1113] mb-4 font-semibold">Structure</h3>
+                <p className="text-[15px] text-[#6B7280]">
                   Everything must be organised.
                 </p>
               </div>
-              <div className="text-center">
-                <h3 className="font-display text-[28px] text-white mb-4">Control</h3>
-                <p className="text-[15px] text-white opacity-70">
+              <div className="text-center border border-[#E5E7EB] p-8 hover:shadow-card-hover transition-shadow duration-200">
+                <h3 className="font-display text-[28px] text-[#0F1113] mb-4 font-semibold">Control</h3>
+                <p className="text-[15px] text-[#6B7280]">
                   Everything must be managed.
                 </p>
               </div>
@@ -142,46 +131,52 @@ export default function DeliveryStandardsPage() {
         </div>
       </section>
 
-      {/* RISK MANAGEMENT */}
-      <section className="bg-[#F7F6F3] py-[120px]">
+      {/* RISK MANAGEMENT - McKinsey Style */}
+      <section className="bg-[#F8F9FA] py-4xl">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
-              <SectionLabel>RISK MANAGEMENT</SectionLabel>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
+                Risk management
+              </p>
             </div>
             <p className="text-[17px] text-[#0F1113] leading-[1.8] mb-4">
               We identify risks early, assign ownership, and define actions.
             </p>
-            <p className="font-display italic text-[20px] text-[#2F5D62]">
+            <p className="font-display italic text-[20px] text-[#2F5D62] font-semibold">
               There are no hidden risks.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* GO-LIVE APPROACH */}
-      <section className="bg-[#EEECEA] py-[120px]">
+      {/* GO-LIVE APPROACH - McKinsey Style */}
+      <section className="bg-white py-4xl">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
-              <SectionLabel>GO-LIVE APPROACH</SectionLabel>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
+                Go-live approach
+              </p>
             </div>
-            <p className="text-[17px] text-[#0F1113] leading-[1.8] mb-4">
+            <p className="text-[17px] text-[#0F1113] leading-[1.8] mb-4 font-semibold">
               We do not aim for perfection. We aim for control.
             </p>
-            <p className="text-[17px] text-[#525250] leading-[1.8]">
+            <p className="text-[17px] text-[#6B7280] leading-[1.8]">
               Go-live decisions are based on clarity and alignment.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* CLOSURE APPROACH */}
-      <section className="bg-[#F7F6F3] py-[120px]">
+      {/* CLOSURE APPROACH - McKinsey Style */}
+      <section className="bg-[#F8F9FA] py-4xl">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
-              <SectionLabel>CLOSURE APPROACH</SectionLabel>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62]">
+                Closure approach
+              </p>
             </div>
             <p className="text-[17px] text-[#0F1113] leading-[1.8]">
               We ensure delivery is clearly understood, outstanding items are visible, and lessons are captured.
@@ -193,15 +188,18 @@ export default function DeliveryStandardsPage() {
       {/* DELIVERY WHEEL */}
       <DeliveryWheel />
 
-      {/* FINAL STATEMENT */}
-      <section className="bg-[#0F1113] py-[120px]">
+      {/* FINAL STATEMENT - McKinsey Style */}
+      <section className="bg-white py-4xl">
         <div className="container-custom max-w-3xl text-center">
           <AnimatedSection>
-            <blockquote className="font-display italic text-[32px] text-white leading-[1.4] mb-12">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
+              Our commitment
+            </p>
+            <blockquote className="font-display text-[32px] text-[#0F1113] leading-[1.4] mb-12 font-semibold">
               We do not aim to impress. We aim to bring clarity, create structure, and deliver with control.
             </blockquote>
             <Button href="/contact" variant="primary">
-              Start a Conversation
+              Start a conversation
             </Button>
           </AnimatedSection>
         </div>

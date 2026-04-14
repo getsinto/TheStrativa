@@ -10,109 +10,91 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative min-h-[40vh] bg-[#0F1113] flex items-center justify-center overflow-hidden">
-        {/* Grain texture overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.04]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
+      {/* HERO - McKinsey Style */}
+      <section className="relative bg-white py-4xl pt-32">
+        <div className="container-custom max-w-content text-center">
+          <div className="animate-fade-in-up">
+            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
+              Get in touch
+            </p>
 
-        <div className="container-custom relative z-10 max-w-4xl">
-          <div
-            className="mb-6 flex justify-center animate-fadeUp"
-            style={{ animationDelay: '0ms', animationFillMode: 'both' }}
-          >
-            <SectionLabel light>GET IN TOUCH</SectionLabel>
+            <h1 className="font-display text-[clamp(40px,6vw,56px)] text-[#0F1113] leading-[1.2] mb-6 font-bold tracking-[-0.02em]">
+              Let's talk about your programme
+            </h1>
+
+            <p className="text-[18px] text-[#6B7280] max-w-[600px] mx-auto">
+              Whether you need to start a conversation, book a call, or simply ask a question.
+            </p>
           </div>
-
-          <h1
-            className="font-display text-white leading-[1.2] mb-6 text-center animate-fadeUp"
-            style={{
-              fontSize: '48px',
-              letterSpacing: '-0.02em',
-              animationDelay: '100ms',
-              animationFillMode: 'both',
-            }}
-          >
-            Let's talk about your programme.
-          </h1>
-
-          <p
-            className="text-[18px] text-white opacity-65 text-center animate-fadeUp"
-            style={{
-              animationDelay: '250ms',
-              animationFillMode: 'both',
-            }}
-          >
-            Whether you need to start a conversation, book a call, or simply ask a question.
-          </p>
         </div>
       </section>
 
-      {/* CONTENT SECTION */}
-      <section className="bg-[#F7F6F3] py-[100px]">
+      {/* CONTENT SECTION - McKinsey Two Column */}
+      <section className="bg-[#F8F9FA] py-4xl">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20">
-            {/* RIGHT — CONTACT INFO (shows first on mobile) */}
-            <div className="lg:col-span-2 order-1 lg:order-2">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+            {/* LEFT — FORM */}
+            <div className="lg:col-span-3">
+              <AnimatedSection>
+                <ContactForm />
+              </AnimatedSection>
+            </div>
+
+            {/* RIGHT — CONTACT INFO */}
+            <div className="lg:col-span-2">
               <AnimatedSection delay={150}>
-                <div className="space-y-12">
-                  {/* Block 1: Get in Touch */}
+                <div className="space-y-10">
+                  {/* Block 1: Email */}
                   <div>
-                    <div className="mb-4">
-                      <SectionLabel>GET IN TOUCH</SectionLabel>
-                    </div>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-3">
+                      Email
+                    </p>
                     <a
-                      href="mailto:hello@thestrativa.com"
-                      className="text-[17px] text-[#2F5D62] hover:underline transition-all"
+                      href="mailto:hello@stratoraconsulting.com"
+                      className="text-[17px] text-[#0F1113] hover:text-[#2F5D62] font-semibold transition-colors"
                     >
-                      hello@thestrativa.com
+                      hello@stratoraconsulting.com
                     </a>
                   </div>
 
                   {/* Block 2: Book a Call */}
                   <div>
-                    <div className="mb-4">
-                      <SectionLabel>BOOK A CALL</SectionLabel>
-                    </div>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-3">
+                      Book a call
+                    </p>
+                    <p className="text-[15px] text-[#6B7280] leading-[1.7] mb-3">
+                      Schedule a 30-minute conversation to discuss your programme and how we can help.
+                    </p>
                     <a
                       href="#"
-                      className="text-[17px] text-[#2F5D62] hover:underline transition-all block mb-2"
+                      className="text-[16px] text-[#2F5D62] hover:text-[#1E3D40] font-semibold transition-colors inline-flex items-center gap-2 group"
                     >
-                      Schedule a 30-minute conversation
+                      Schedule now
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
                     </a>
-                    <p className="text-[14px] text-[#525250] leading-[1.7]">
-                      We'll discuss your programme and how we can help.
-                    </p>
                   </div>
 
                   {/* Block 3: Response Time */}
                   <div>
-                    <div className="mb-4">
-                      <SectionLabel>RESPONSE TIME</SectionLabel>
-                    </div>
-                    <p className="text-[15px] text-[#525250] leading-[1.7]">
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-3">
+                      Response time
+                    </p>
+                    <p className="text-[15px] text-[#6B7280] leading-[1.7]">
                       We aim to respond to all messages within 24 hours.
                     </p>
                   </div>
 
-                  {/* Decorative rule and quote */}
-                  <div className="pt-8 border-t border-[#E8E6E1]">
-                    <p className="font-display italic text-[20px] text-[#0F1113] leading-[1.5]">
-                      "Every complex programme starts with a conversation."
-                    </p>
+                  {/* Quote */}
+                  <div className="pt-8 border-t border-[#E5E7EB]">
+                    <div className="border-l-4 border-[#2F5D62] pl-6">
+                      <p className="font-display italic text-[18px] text-[#0F1113] leading-[1.5]">
+                        Every complex programme starts with a conversation.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </AnimatedSection>
-            </div>
-
-            {/* LEFT — FORM */}
-            <div className="lg:col-span-3 order-2 lg:order-1">
-              <AnimatedSection>
-                <ContactForm />
               </AnimatedSection>
             </div>
           </div>

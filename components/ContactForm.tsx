@@ -277,12 +277,12 @@ export default function ContactForm() {
           )}
         </div>
 
-        {/* Submit button */}
+        {/* Submit button - McKinsey Style */}
         <button
           type="submit"
           disabled={isLoading}
           aria-busy={isLoading}
-          className="w-full bg-[#2F5D62] text-white px-4 py-4 text-[13px] uppercase tracking-widest font-medium transition-colors duration-200 hover:bg-[#1E3D40] focus:outline-none focus:ring-2 focus:ring-[#2F5D62] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+          className="w-full bg-[#2F5D62] text-white px-8 py-4 text-[16px] font-semibold transition-all duration-200 hover:bg-[#1E3D40] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#2F5D62] focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
         >
           {isLoading ? (
             <>
@@ -293,7 +293,7 @@ export default function ContactForm() {
               Sending...
             </>
           ) : (
-            'Send Message'
+            'Send message'
           )}
         </button>
 
