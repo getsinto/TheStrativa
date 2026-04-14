@@ -9,6 +9,7 @@ export const metadata = {
   description: 'Stratora Consulting helps organisations deliver complex programmes with structure, control, and confidence. ERP, transformation, go-live readiness, and digital delivery.',
 };
 
+
 export default function HomePage() {
   return (
     <main className="pt-20">
