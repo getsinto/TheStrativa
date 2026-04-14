@@ -13,40 +13,92 @@ export const metadata = {
 export default function HomePage() {
   return (
     <main className="pt-20">
-      {/* SECTION 1 — HERO - McKinsey Style */}
-      <section className="relative min-h-[90vh] bg-white flex items-center justify-center py-4xl">
-        <div className="container-custom max-w-content text-left">
-          <div className="animate-fade-in-up">
-            {/* Eyebrow label - McKinsey style */}
-            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
-              Programme Delivery Excellence
-            </p>
-            
-            {/* Main headline - clean, bold */}
-            <h1 className="font-display text-[clamp(48px,6vw,72px)] text-[#0F1113] leading-[1.1] mb-8 font-bold tracking-[-0.02em]">
-              Clarity where others see complexity.
-              <br />
-              Control where others lose it.
-            </h1>
+      {/* SECTION 1 — HERO - McKinsey Style with Professional Background */}
+      <section className="relative min-h-[90vh] bg-white flex items-center justify-center py-4xl overflow-hidden">
+        {/* Professional gradient background - McKinsey inspired */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F8F9FA] via-white to-[#F8F9FA] opacity-60" />
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#2F5D62] opacity-[0.03] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#2F5D62] opacity-[0.02] rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container-custom max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div className="animate-fade-in-up">
+              {/* Eyebrow label - McKinsey style */}
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
+                Programme Delivery Excellence
+              </p>
+              
+              {/* Main headline - clean, bold */}
+              <h1 className="font-display text-[clamp(48px,6vw,72px)] text-[#0F1113] leading-[1.1] mb-8 font-bold tracking-[-0.02em]">
+                Clarity where others see complexity.
+                <br />
+                Control where others lose it.
+              </h1>
 
-            {/* Supporting text */}
-            <p className="text-[20px] leading-[1.7] text-[#374151] max-w-[600px] mb-12">
-              We help organisations take control of complex work bringing structure, direction, and delivery where it matters most.
-            </p>
+              {/* Supporting text */}
+              <p className="text-[20px] leading-[1.7] text-[#374151] max-w-[600px] mb-12">
+                We help organisations take control of complex work bringing structure, direction, and delivery where it matters most.
+              </p>
 
-            {/* CTAs */}
-            <div className="flex gap-4 flex-wrap">
-              <Button href="/contact" variant="primary">
-                Start a conversation
-              </Button>
-              <Button href="/case-studies" variant="secondary">
-                Explore our work
-              </Button>
+              {/* CTAs */}
+              <div className="flex gap-4 flex-wrap">
+                <Button href="/contact" variant="primary">
+                  Start a conversation
+                </Button>
+                <Button href="/case-studies" variant="secondary">
+                  Explore our work
+                </Button>
+              </div>
+              
+              <p className="text-[14px] text-[#6B7280] mt-6">
+                No obligation. Clear direction from the first discussion.
+              </p>
             </div>
-            
-            <p className="text-[14px] text-[#6B7280] mt-6">
-              No obligation. Clear direction from the first discussion.
-            </p>
+
+            {/* Right: Hero Visual Area */}
+            <div className="hidden lg:block animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+              <div className="relative">
+                {/* Professional placeholder with subtle pattern */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-[#F8F9FA] via-white to-[#E5E7EB] rounded-lg overflow-hidden border border-[#E5E7EB] relative">
+                  {/* Add your hero image here: public/images/hero-consulting.jpg */}
+                  {/* <img 
+                    src="/images/hero-consulting.jpg" 
+                    alt="Professional programme delivery"
+                    className="w-full h-full object-cover"
+                  /> */}
+                  
+                  {/* Elegant placeholder design */}
+                  <div className="absolute inset-0 flex items-center justify-center p-12">
+                    <div className="text-center">
+                      {/* Geometric pattern */}
+                      <div className="relative w-48 h-48 mx-auto mb-6">
+                        <div className="absolute inset-0 border-4 border-[#2F5D62] opacity-10 rounded-full" />
+                        <div className="absolute inset-4 border-4 border-[#2F5D62] opacity-15 rounded-full" />
+                        <div className="absolute inset-8 border-4 border-[#2F5D62] opacity-20 rounded-full" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-[#2F5D62] opacity-30">
+                            <svg className="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-[#6B7280] text-xs font-medium">
+                        Add your hero image to<br />
+                        <code className="text-[#2F5D62]">/public/images/hero-consulting.jpg</code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Decorative accents */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#2F5D62] opacity-5 rounded-lg -z-10" />
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#2F5D62] opacity-5 rounded-lg -z-10" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -160,9 +212,23 @@ export default function HomePage() {
             {/* Featured Case Study Block */}
             <div className="bg-white border border-[#E5E7EB] grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:shadow-card-hover transition-shadow duration-300">
               {/* Image */}
-              <div className="bg-[#F3F4F6] h-64 lg:h-auto relative">
+              <div className="bg-gradient-to-br from-[#F8F9FA] to-[#E5E7EB] h-64 lg:h-auto relative overflow-hidden">
+                {/* Uncomment when you have an image */}
+                {/* <img 
+                  src="/images/case-study-erp.jpg" 
+                  alt="ERP Programme Closure"
+                  className="w-full h-full object-cover"
+                /> */}
+                
+                {/* Placeholder design */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 border-2 border-[#2F5D62] opacity-20 rounded-full" />
+                  <div className="text-center p-8">
+                    <div className="w-32 h-32 mx-auto mb-4 border-2 border-[#2F5D62] opacity-20 rounded-full" />
+                    <p className="text-[#6B7280] text-sm">
+                      Add case study image:<br />
+                      /images/case-study-erp.jpg
+                    </p>
+                  </div>
                 </div>
               </div>
 
