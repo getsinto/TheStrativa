@@ -39,7 +39,7 @@ function formatDate(dateString: string) {
 // Revalidate every 60 seconds (ISR)
 export const revalidate = 60;
 
-// Enable dynamic params
+// Enable dynamic params - allows new pages to be generated on-demand
 export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
