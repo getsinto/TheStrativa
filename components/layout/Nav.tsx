@@ -63,7 +63,11 @@ export default function Nav() {
         <div className="container-custom h-full">
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link 
+              href="/" 
+              className="flex items-center gap-3 group relative z-[110]"
+              onClick={() => setIsOpen(false)}
+            >
               <svg
                 width="32"
                 height="32"
@@ -92,23 +96,25 @@ export default function Nav() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-10">
+            <div className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative text-[14px] font-normal text-[#0F1113] transition-colors duration-200 hover:text-[#2F5D62]"
+                  className={`relative text-[14px] font-medium transition-colors duration-200 hover:text-[#2F5D62] ${
+                    pathname === link.href ? 'text-[#2F5D62]' : 'text-[#0F1113]'
+                  }`}
                   style={{ letterSpacing: '0.02em' }}
                 >
                   {link.label}
                   {pathname === link.href && (
-                    <span className="absolute -bottom-1 left-0 w-full h-[1px] bg-[#2F5D62]"></span>
+                    <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#2F5D62]"></span>
                   )}
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-5 py-2.5 text-sm uppercase tracking-widest bg-[#2F5D62] text-white transition-all duration-200 hover:bg-[#1E3D40] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5D62] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center px-6 py-2.5 text-[13px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-200 hover:bg-[#1E3D40] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5D62] focus-visible:ring-offset-2"
               >
                 Start a Conversation
               </Link>
@@ -151,34 +157,54 @@ export default function Nav() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 bottom-0 w-full bg-[#F7F6F3] z-[95] md:hidden transition-transform duration-350 ${
+        className={`fixed top-0 right-0 bottom-0 w-full bg-white z-[95] md:hidden transition-transform duration-350 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{
           transition: 'transform 350ms cubic-bezier(0.16, 1, 0.3, 1)',
         }}
       >
-        <div className="flex flex-col items-center justify-center h-full px-8">
-          {navLinks.map((link, index) => (
+        <div className="flex flex-col h-full px-8 pt-32 pb-12">
+          {/* Navigation Links */}
+          <nav className="flex-1 flex flex-col justify-center space-y-2">
+            {navLinks.map((link, index) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`font-display text-[28px] text-[#0F1113] py-3 transition-all duration-200 hover:text-[#2F5D62] hover:translate-x-2 ${
+                  pathname === link.href ? 'text-[#2F5D62] font-semibold' : ''
+                }`}
+                style={{
+                  transitionDelay: isOpen ? `${index * 50}ms` : '0ms',
+                }}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <div className="pt-8 border-t border-[#E5E7EB]">
             <Link
-              key={link.href}
-              href={link.href}
+              href="/contact"
               onClick={() => setIsOpen(false)}
-              className="font-display text-[32px] text-[#0F1113] mb-8 transition-colors duration-200 hover:text-[#2F5D62]"
-              style={{
-                transitionDelay: isOpen ? `${index * 50}ms` : '0ms',
-              }}
+              className="w-full inline-flex items-center justify-center px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-200 hover:bg-[#1E3D40]"
             >
-              {link.label}
+              Start a Conversation
             </Link>
-          ))}
-          <Link
-            href="/contact"
-            onClick={() => setIsOpen(false)}
-            className="inline-flex items-center justify-center px-8 py-4 text-sm uppercase tracking-widest bg-[#2F5D62] text-white transition-all duration-200 hover:bg-[#1E3D40] mt-4"
-          >
-            Start a Conversation
-          </Link>
+            
+            {/* Contact Info */}
+            <div className="mt-6 text-center">
+              <p className="text-[13px] text-[#6B7280] mb-2">Or email us at</p>
+              <a
+                href="mailto:hello@stratoraconsulting.com"
+                className="text-[14px] text-[#2F5D62] hover:text-[#1E3D40] font-medium transition-colors"
+              >
+                hello@stratoraconsulting.com
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </>
