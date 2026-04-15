@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Perspectives on programme delivery, go-live readiness, and controlled outcomes from The Strativa.',
 };
 
-export const revalidate = 3600;
+export const revalidate = 60; // Revalidate every 60 seconds
 
 const STATIC_INSIGHTS = [
   {
@@ -49,12 +49,13 @@ async function getInsights() {
       projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
       dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
       apiVersion: '2024-01-01',
-      useCdn: true,
+      useCdn: false, // Use fresh data
     });
     
     const insights = await client.fetch(`*[_type == "insight"] | order(publishedAt desc)`);
     return insights.length > 0 ? insights : STATIC_INSIGHTS;
-  } catch {
+  } catch (error) {
+    console.error('Error fetching insights:', error);
     return STATIC_INSIGHTS;
   }
 }

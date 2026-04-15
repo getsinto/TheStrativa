@@ -13,7 +13,7 @@ async function getCaseStudy(slug: string) {
       projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
       dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
       apiVersion: '2024-01-01',
-      useCdn: true,
+      useCdn: false, // Use fresh data, not CDN
     });
     
     const caseStudy = await client.fetch(
@@ -23,7 +23,7 @@ async function getCaseStudy(slug: string) {
     
     if (caseStudy) return caseStudy;
   } catch (error) {
-    // Fall through to static data
+    console.error('Error fetching case study from Sanity:', error);
   }
   
   return STATIC_CASE_STUDIES.find((study) => study.slug.current === slug);
@@ -36,7 +36,11 @@ function formatDate(dateString: string) {
   });
 }
 
-export const revalidate = 3600;
+// Revalidate every 60 seconds (ISR)
+export const revalidate = 60;
+
+// Enable dynamic params
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const caseStudy = await getCaseStudy(params.slug);
@@ -54,6 +58,26 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export async function generateStaticParams() {
+  try {
+    const client = createClient({
+      projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
+      dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+      apiVersion: '2024-01-01',
+      useCdn: false,
+    });
+    
+    const caseStudies = await client.fetch(`*[_type == "caseStudy"]{ "slug": slug.current }`);
+    
+    if (caseStudies && caseStudies.length > 0) {
+      return caseStudies.map((study: any) => ({
+        slug: study.slug,
+      }));
+    }
+  } catch (error) {
+    console.error('Error generating static params:', error);
+  }
+  
+  // Fallback to static data
   return STATIC_CASE_STUDIES.map((study) => ({
     slug: study.slug.current,
   }));

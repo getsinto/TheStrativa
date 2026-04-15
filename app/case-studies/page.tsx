@@ -10,7 +10,7 @@ export const metadata = {
   description: 'Real programme delivery work by Stratora Consulting. ERP closure, go-live readiness, lessons learned — controlled outcomes across complex programmes.',
 };
 
-export const revalidate = 3600;
+export const revalidate = 60; // Revalidate every 60 seconds
 
 async function getCaseStudies() {
   try {
@@ -18,12 +18,13 @@ async function getCaseStudies() {
       projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
       dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
       apiVersion: '2024-01-01',
-      useCdn: true,
+      useCdn: false, // Use fresh data
     });
     
     const caseStudies = await client.fetch(`*[_type == "caseStudy"] | order(publishedAt desc)`);
     return caseStudies.length > 0 ? caseStudies : STATIC_CASE_STUDIES;
-  } catch {
+  } catch (error) {
+    console.error('Error fetching case studies:', error);
     return STATIC_CASE_STUDIES;
   }
 }
