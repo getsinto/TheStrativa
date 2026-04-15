@@ -198,9 +198,15 @@ export default function DeliveryStandardsPage() {
             <blockquote className="font-display text-[32px] text-[#0F1113] leading-[1.4] mb-12 font-semibold">
               We do not aim to impress. We aim to bring clarity, create structure, and deliver with control.
             </blockquote>
-            <Button href="/contact" variant="primary">
-              Start a conversation
-            </Button>
+            <p className="text-[16px] text-[#6B7280]">
+              Contact us at{' '}
+              <a
+                href="mailto:hello@stratoraconsulting.com"
+                className="text-[#2F5D62] hover:text-[#1E3D40] font-semibold transition-colors"
+              >
+                hello@stratoraconsulting.com
+              </a>
+            </p>
           </AnimatedSection>
         </div>
       </section>

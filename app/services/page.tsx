@@ -2,6 +2,7 @@ import { createClient } from '@sanity/client';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
 import Button from '@/components/ui/Button';
+import DeliveryWheel from '@/components/sections/DeliveryWheel';
 import Link from 'next/link';
 
 export const metadata = {
@@ -185,6 +186,9 @@ export default async function ServicesPage() {
         );
       })}
 
+      {/* DELIVERY MODEL */}
+      <DeliveryWheel />
+
       {/* BOTTOM CTA - McKinsey Style */}
       <section className="bg-white py-4xl">
         <div className="container-custom max-w-3xl text-center">
@@ -195,7 +199,7 @@ export default async function ServicesPage() {
             <h2 className="font-display text-[#0F1113] text-[40px] leading-[1.3] mb-12 font-semibold">
               Ready to discuss your programme?
             </h2>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
               <Button href="/contact" variant="primary">
                 Start a conversation
               </Button>

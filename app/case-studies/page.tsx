@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { createClient } from '@sanity/client';
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import SectionLabel from '@/components/ui/SectionLabel';
+import Button from '@/components/ui/Button';
 import { STATIC_CASE_STUDIES } from '@/lib/caseStudiesData';
 
 export const metadata = {
@@ -106,6 +107,21 @@ export default async function CaseStudiesPage() {
                 </Link>
               </AnimatedSection>
             ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-16">
+            <AnimatedSection>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-6">
+                Get in touch
+              </p>
+              <h3 className="font-display text-[28px] text-[#0F1113] font-semibold mb-8">
+                Have a similar challenge?
+              </h3>
+              <Button href="/contact" variant="primary">
+                Start a conversation
+              </Button>
+            </AnimatedSection>
           </div>
         </div>
       </section>

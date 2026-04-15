@@ -254,6 +254,21 @@ export default function HomePage() {
                 View all case studies →
               </Link>
             </div>
+
+            {/* CTA Section */}
+            <div className="text-center mt-16 pt-16 border-t border-[#E5E7EB]">
+              <AnimatedSection>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-6">
+                  Get in touch
+                </p>
+                <h3 className="font-display text-[28px] text-[#0F1113] font-semibold mb-8">
+                  Ready to discuss your next project?
+                </h3>
+                <Button href="/contact" variant="primary">
+                  Start a conversation
+                </Button>
+              </AnimatedSection>
+            </div>
           </AnimatedSection>
         </div>
       </section>

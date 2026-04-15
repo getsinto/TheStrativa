@@ -358,11 +358,8 @@ export default function DeliveryWheel() {
               Every phase is controlled. Nothing is left to chance.
             </p>
             <div className="flex flex-col items-center gap-4">
-              <Button href="/contact" variant="primary">
-                Start a conversation
-              </Button>
               <p className="text-[14px] text-[#6B7280]">
-                Or email us at{' '}
+                Email us at{' '}
                 <a
                   href="mailto:hello@stratoraconsulting.com"
                   className="text-[#2F5D62] hover:text-[#1E3D40] font-semibold transition-colors"
