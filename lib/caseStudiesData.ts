@@ -243,6 +243,84 @@ export const STATIC_CASE_STUDIES = [
   },
   {
     _id: '4',
+    title: 'Lessons Learned Survey Design',
+    subtitle: 'Capturing meaningful insights from programme delivery.',
+    slug: { current: 'lessons-learned-survey-design' },
+    situation: 'A programme needed to capture lessons learned, but without clear structure or focus.\n\nDelivered with clarity, structure, and actionable insights.',
+    theSituation: {
+      intro: 'The programme was ending, but lessons were not being captured properly.',
+      points: [
+        'No clear survey structure',
+        'Questions were not focused',
+        'Responses would be difficult to analyze',
+        'Insights would be lost',
+      ],
+      conclusion: 'Lessons existed but were not being captured effectively.',
+    },
+    whatWasAtRisk: {
+      intro: 'Without intervention:',
+      points: [
+        'Valuable insights would be lost',
+        'Future programmes would repeat mistakes',
+        'Survey responses would be unclear',
+        'No actionable outcomes',
+      ],
+      conclusion: 'This was not a survey problem.\nIt was a structure problem.',
+    },
+    whatWeDid: {
+      intro: 'We designed a structured approach to capture lessons.',
+      sections: [
+        {
+          title: 'Defined clarity',
+          points: [
+            'Created focused questions',
+            'Structured the survey properly',
+            'Aligned with programme objectives',
+          ],
+        },
+        {
+          title: 'Ensured quality',
+          points: [
+            'Made questions clear and specific',
+            'Removed ambiguity',
+            'Enabled meaningful responses',
+          ],
+        },
+        {
+          title: 'Enabled action',
+          points: [
+            'Structured for analysis',
+            'Focused on actionable insights',
+            'Made results usable',
+          ],
+        },
+      ],
+      conclusion: 'Everything became focused. Everything became actionable.',
+    },
+    theResult: {
+      intro: 'Lessons learned became clear and actionable.',
+      points: [
+        'Clear, focused survey',
+        'Meaningful responses',
+        'Actionable insights captured',
+        'Value for future programmes',
+      ],
+      conclusion: 'Lessons captured. Not just collected.',
+    },
+    whyItWorked: {
+      intro: 'We did not just ask questions.\n\nWe structured them properly.',
+      points: [
+        'Clear focus',
+        'Clear structure',
+        'Clear outcomes',
+      ],
+      conclusion: 'Nothing was left vague.',
+    },
+    publishedAt: '2024-05-01',
+    featured: false,
+  },
+  {
+    _id: '5',
     title: 'Website Delivery & Structured Execution',
     subtitle: 'From scattered ideas to a structured, premium website.',
     slug: { current: 'website-delivery' },
