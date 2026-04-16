@@ -21,11 +21,23 @@ async function getCaseStudy(slug: string) {
       { slug }
     );
     
-    if (caseStudy) return caseStudy;
+    if (caseStudy) {
+      // Check if Sanity data has the required detailed structure
+      const hasDetailedStructure = caseStudy.theSituation && caseStudy.whatWasAtRisk && 
+                                   caseStudy.whatWeDid && caseStudy.theResult && caseStudy.whyItWorked;
+      
+      const hasFlagshipStructure = caseStudy.isFlagship && caseStudy.sections;
+      
+      if (hasDetailedStructure || hasFlagshipStructure) {
+        return caseStudy;
+      }
+      // If Sanity data is incomplete, fall through to static data
+    }
   } catch (error) {
     console.error('Error fetching case study from Sanity:', error);
   }
   
+  // Fallback to static data
   return STATIC_CASE_STUDIES.find((study) => study.slug.current === slug);
 }
 
