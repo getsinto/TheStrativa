@@ -115,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 2 — STATEMENT - Premium Quote Style */}
-      <section className="relative bg-gradient-to-br from-neutral-50 via-white to-neutral-50 py-section-xl overflow-hidden">
+      <section className="relative bg-gradient-to-br from-neutral-50 via-white to-neutral-50 py-16 md:py-20 lg:py-24 overflow-hidden">
         {/* Decorative accent line at top */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-teal to-primary-gold"></div>
         
@@ -150,10 +150,10 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 3 — SERVICES GRID - Premium Card Style */}
-      <section className="bg-white py-section-xl">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-7xl">
           {/* Section Header */}
-          <div className="mb-16 text-center">
+          <div className="mb-20 text-center">
             <div className="inline-flex items-center gap-2 mb-4">
               <div className="w-8 h-0.5 bg-primary-teal"></div>
               <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
@@ -252,11 +252,11 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 4 — FEATURED WORK - Premium Large Card */}
-      <section className="bg-gradient-to-br from-neutral-50 to-white py-section-xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-7xl">
           <AnimatedSection>
             {/* Section Header */}
-            <div className="mb-16">
+            <div className="mb-20">
               <div className="inline-flex items-center gap-2 mb-4">
                 <div className="w-8 h-0.5 bg-primary-teal"></div>
                 <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
@@ -356,11 +356,11 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 5 — HOW WE WORK - Premium Feature Style */}
-      <section className="bg-white py-section-xl">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-5xl">
           <AnimatedSection>
             {/* Section Header */}
-            <div className="mb-16 text-center">
+            <div className="mb-20 text-center">
               <div className="inline-flex items-center gap-2 mb-4">
                 <div className="w-8 h-0.5 bg-primary-teal"></div>
                 <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
@@ -528,7 +528,7 @@ export default function HomePage() {
       <DeliveryWheel />
 
       {/* SECTION 7 — CLOSING CTA - Premium Simple CTA */}
-      <section className="relative bg-gradient-to-br from-primary-navy via-[#003366] to-primary-teal py-section-xl overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-navy via-[#003366] to-primary-teal py-16 md:py-20 lg:py-24 overflow-hidden">
         {/* Pattern overlay */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{

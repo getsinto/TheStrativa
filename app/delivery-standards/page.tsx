@@ -13,7 +13,7 @@ export default function DeliveryStandardsPage() {
   return (
     <main className="pt-20">
       {/* HERO - McKinsey Style */}
-      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-4xl">
+      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-4xl text-center">
           <div className="animate-fade-in-up">
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
@@ -32,7 +32,7 @@ export default function DeliveryStandardsPage() {
       </section>
 
       {/* INTRODUCTION - McKinsey Style */}
-      <section className="bg-[#F8F9FA] py-4xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
@@ -51,7 +51,7 @@ export default function DeliveryStandardsPage() {
       </section>
 
       {/* HOW WE WORK - McKinsey Style */}
-      <section className="bg-white py-4xl">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
@@ -67,7 +67,7 @@ export default function DeliveryStandardsPage() {
       </section>
 
       {/* WHAT YOU CAN EXPECT - McKinsey Style */}
-      <section className="bg-[#F8F9FA] py-4xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
@@ -98,7 +98,7 @@ export default function DeliveryStandardsPage() {
       </section>
 
       {/* OUR STANDARDS - McKinsey Style */}
-      <section className="bg-white py-4xl">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-4xl">
           <AnimatedSection>
             <div className="mb-12 text-center">
@@ -132,7 +132,7 @@ export default function DeliveryStandardsPage() {
       </section>
 
       {/* RISK MANAGEMENT - McKinsey Style */}
-      <section className="bg-[#F8F9FA] py-4xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
@@ -151,7 +151,7 @@ export default function DeliveryStandardsPage() {
       </section>
 
       {/* GO-LIVE APPROACH - McKinsey Style */}
-      <section className="bg-white py-4xl">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
@@ -170,7 +170,7 @@ export default function DeliveryStandardsPage() {
       </section>
 
       {/* CLOSURE APPROACH - McKinsey Style */}
-      <section className="bg-[#F8F9FA] py-4xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-3xl">
           <AnimatedSection>
             <div className="mb-8">
@@ -189,7 +189,7 @@ export default function DeliveryStandardsPage() {
       <DeliveryWheel />
 
       {/* FINAL STATEMENT - McKinsey Style */}
-      <section className="bg-white py-4xl">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-3xl text-center">
           <AnimatedSection>
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">

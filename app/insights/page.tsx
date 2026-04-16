@@ -78,60 +78,71 @@ export default async function InsightsPage() {
 
   return (
     <main className="pt-20">
-      {/* HERO - McKinsey Style */}
-      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-4xl">
+      {/* HERO */}
+      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-4xl text-center">
           <div className="animate-fade-in-up">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
-              Insights
-            </p>
+            <div className="inline-flex items-center gap-2 mb-6">
+              <div className="w-8 h-0.5 bg-primary-teal"></div>
+              <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
+                Insights
+              </p>
+              <div className="w-8 h-0.5 bg-primary-teal"></div>
+            </div>
 
-            <h1 className="font-display text-[clamp(40px,6vw,64px)] text-[#0F1113] leading-[1.2] mb-6 font-semibold tracking-[-0.02em]">
-              Thinking clearly about delivery.
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 leading-tight mb-6 font-bold tracking-tight">
+              Thinking clearly about delivery
             </h1>
 
-            <p className="text-[18px] text-[#6B7280] leading-[1.7]">
-              Points of view from the Stratora team.
+            <p className="text-lg text-neutral-600 leading-relaxed">
+              Points of view from the Stratora team
             </p>
           </div>
         </div>
       </section>
 
-      {/* INSIGHTS GRID - McKinsey Style */}
-      <section className="bg-[#F8F9FA] py-4xl">
-        <div className="container-custom max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* INSIGHTS GRID - Premium Card Style */}
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
+        <div className="container-custom max-w-7xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {insights.map((insight: any, index: number) => (
               <AnimatedSection key={insight._id} delay={index * 100}>
                 <Link href={`/insights/${insight.slug.current}`}>
-                  <article className="group bg-white border border-[#E5E7EB] p-10 transition-all duration-200 hover:shadow-card-hover hover:border-[#2F5D62] h-full flex flex-col">
+                  <article className="card-premium h-full group cursor-pointer flex flex-col">
+                    {/* Icon */}
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-teal/10 to-primary-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-6 h-6 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+
                     {/* Date */}
-                    <time className="text-[12px] text-[#6B7280] uppercase tracking-wider font-semibold">
+                    <time className="text-xs text-neutral-500 uppercase tracking-wider font-semibold block mb-3">
                       {formatDate(insight.publishedAt)}
                     </time>
 
                     {/* Title */}
-                    <h2 className="font-display text-[26px] text-[#0F1113] mt-3 mb-4 leading-[1.3] font-semibold">
+                    <h2 className="font-display text-2xl text-neutral-900 mb-4 leading-tight font-semibold group-hover:text-primary-teal transition-colors">
                       {insight.title}
                     </h2>
 
                     {/* Summary */}
-                    <p className="text-[15px] text-[#6B7280] leading-[1.7] mb-4">
+                    <p className="text-base text-neutral-600 leading-relaxed mb-4">
                       {insight.summary}
                     </p>
 
                     {/* Pull quote */}
-                    <p className="font-display italic text-[17px] text-[#2F5D62] leading-[1.5] mb-6 flex-1">
+                    <p className="font-display italic text-base text-primary-teal leading-relaxed mb-6 flex-1">
                       "{insight.quote}"
                     </p>
 
                     {/* Bottom bar */}
-                    <div className="flex items-center justify-between pt-4 border-t border-[#E5E7EB]">
-                      <span className="text-[14px] text-[#2F5D62] font-semibold flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
+                    <div className="flex items-center gap-2 pt-4 border-t border-neutral-200">
+                      <span className="text-sm text-primary-teal font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                         Read article
-                        <span className="transition-transform duration-200 group-hover:translate-x-1">
-                          →
-                        </span>
+                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
                       </span>
                     </div>
                   </article>
@@ -143,10 +154,14 @@ export default async function InsightsPage() {
           {/* CTA Section */}
           <div className="text-center mt-16">
             <AnimatedSection>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-6">
-                Get in touch
-              </p>
-              <h3 className="font-display text-[28px] text-[#0F1113] font-semibold mb-8">
+              <div className="inline-flex items-center gap-2 mb-6">
+                <div className="w-8 h-0.5 bg-primary-teal"></div>
+                <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
+                  Get in touch
+                </p>
+                <div className="w-8 h-0.5 bg-primary-teal"></div>
+              </div>
+              <h3 className="font-display text-3xl md:text-4xl text-neutral-900 font-bold mb-8">
                 Want to discuss your programme delivery?
               </h3>
               <Button href="/contact" variant="primary">

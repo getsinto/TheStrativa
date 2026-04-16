@@ -14,8 +14,16 @@ const navigationLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F1113] text-white">
-      <div className="container-custom pt-20 pb-12">
+    <footer className="bg-gradient-to-br from-primary-navy via-[#003366] to-primary-teal text-white relative overflow-hidden">
+      {/* Pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
+      
+      <div className="container-custom pt-20 pb-12 relative z-10">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
           {/* Left Column */}
@@ -42,12 +50,12 @@ export default function Footer() {
                 <span className="font-display text-[11px] tracking-[0.15em] text-white font-medium uppercase leading-tight">
                   STRATORA
                 </span>
-                <span className="font-display text-[9px] tracking-[0.15em] text-[#A89F91] font-normal uppercase leading-tight">
+                <span className="font-display text-[9px] tracking-[0.15em] text-white/60 font-normal uppercase leading-tight">
                   CONSULTING
                 </span>
               </div>
             </Link>
-            <p className="text-[13px] text-[#A89F91] mb-2">Delivery partnership led by</p>
+            <p className="text-[13px] text-white/60 mb-2">Delivery partnership led by</p>
             <p className="font-display text-[15px] text-white">
               Olusegun Olamide & Hiram Kanwal
             </p>
@@ -63,7 +71,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[14px] text-[#A89F91] hover:text-white transition-colors duration-150 inline-block"
+                    className="text-[14px] text-white/80 hover:text-white transition-colors duration-150 inline-block"
                   >
                     {link.label}
                   </Link>
@@ -80,13 +88,13 @@ export default function Footer() {
             <div className="space-y-3">
               <a
                 href="mailto:hello@stratoraconsulting.com"
-                className="text-[14px] text-[#A89F91] hover:text-[#2F5D62] transition-colors duration-150 block"
+                className="text-[14px] text-white/80 hover:text-primary-gold transition-colors duration-150 block"
               >
                 hello@stratoraconsulting.com
               </a>
               <a
                 href="/contact"
-                className="text-[14px] text-[#A89F91] hover:text-white transition-colors duration-150 block"
+                className="text-[14px] text-white/80 hover:text-white transition-colors duration-150 block"
               >
                 Book a call
               </a>
@@ -94,7 +102,7 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[14px] text-[#A89F91] hover:text-white transition-colors duration-150 mt-4"
+                className="inline-flex items-center gap-2 text-[14px] text-white/80 hover:text-white transition-colors duration-150 mt-4"
               >
                 <svg
                   width="20"
@@ -112,12 +120,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-[#1E1E1E]">
+        <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <p className="text-[13px] text-[#525250]">
+            <p className="text-[13px] text-white/60">
               © 2025 Stratora Consulting · stratoraconsulting.com
             </p>
-            <p className="text-[13px] italic text-[#525250]">
+            <p className="text-[13px] italic text-white/60">
               Programme delivery. Digital execution. Controlled outcomes.
             </p>
           </div>

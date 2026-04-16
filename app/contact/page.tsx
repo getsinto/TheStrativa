@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO - McKinsey Style */}
-      <section className="relative bg-white py-4xl pt-32">
+      <section className="relative bg-white py-16 md:py-20 lg:py-24 pt-32">
         <div className="container-custom max-w-content text-center">
           <div className="animate-fade-in-up">
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
@@ -30,7 +30,7 @@ export default function ContactPage() {
       </section>
 
       {/* CONTENT SECTION - McKinsey Two Column */}
-      <section className="bg-[#F8F9FA] py-4xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* LEFT — FORM */}

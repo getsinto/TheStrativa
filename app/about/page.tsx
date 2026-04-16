@@ -57,7 +57,7 @@ export default function AboutPage() {
   return (
     <main className="pt-20">
       {/* SECTION 1 — PAGE HERO - McKinsey Style */}
-      <section className="relative bg-white py-4xl">
+      <section className="relative bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-content">
           <div className="animate-fade-in-up">
             <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
@@ -75,40 +75,49 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 2 — LEADERSHIP - McKinsey Card Style */}
-      <section className="bg-[#F8F9FA] py-4xl">
-        <div className="container-custom">
+      {/* SECTION 2 — LEADERSHIP - Premium Card Style */}
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
+        <div className="container-custom max-w-7xl">
           <AnimatedSection>
-            <div className="mb-16">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-4">
-                Leadership
-              </p>
-              <h2 className="font-display text-[36px] text-[#0F1113] font-semibold leading-[1.2]">
+            {/* Section Header */}
+            <div className="mb-20 text-center">
+              <div className="inline-flex items-center gap-2 mb-4">
+                <div className="w-8 h-0.5 bg-primary-teal"></div>
+                <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
+                  Leadership
+                </p>
+                <div className="w-8 h-0.5 bg-primary-teal"></div>
+              </div>
+              <h2 className="font-display text-4xl md:text-5xl text-neutral-900 font-bold mb-4">
                 The partnership
               </h2>
+              <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+                Two disciplines. One delivery standard.
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {leaders.map((leader, index) => (
                 <AnimatedSection key={leader.name} delay={index * 150}>
-                  <div className="bg-white border border-[#E5E7EB] p-10 hover:shadow-card-hover transition-shadow duration-200">
-                    <div className="w-16 h-16 rounded-full border-2 border-[#2F5D62] flex items-center justify-center mb-6">
-                      <span className="font-display text-[24px] text-[#2F5D62] font-semibold">
+                  <div className="card-premium h-full group cursor-pointer">
+                    {/* Icon Circle */}
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary-teal/10 to-primary-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <span className="font-display text-[24px] text-primary-teal font-semibold">
                         {leader.initial}
                       </span>
                     </div>
 
-                    <h3 className="font-display text-[24px] text-[#0F1113] font-semibold mb-2">
+                    <h3 className="font-display text-2xl text-neutral-900 font-semibold mb-2 group-hover:text-primary-teal transition-colors">
                       {leader.name}
                     </h3>
 
-                    <p className="text-[12px] text-[#2F5D62] uppercase tracking-[0.1em] font-semibold mb-6">
+                    <p className="text-xs text-primary-teal uppercase tracking-widest font-semibold mb-6">
                       {leader.role}
                     </p>
 
-                    <div className="h-[1px] bg-[#E5E7EB] my-6" />
+                    <div className="h-[1px] bg-neutral-200 my-6" />
 
-                    <p className="text-[15px] text-[#6B7280] leading-[1.7]">
+                    <p className="text-base text-neutral-600 leading-relaxed">
                       {leader.description}
                     </p>
                   </div>
@@ -120,7 +129,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 3 — WHO WE ARE - McKinsey Two Column */}
-      <section className="bg-white py-4xl">
+      <section className="bg-white py-16 md:py-20 lg:py-24">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
@@ -151,7 +160,7 @@ export default function AboutPage() {
       </section>
 
       {/* SECTION 4 — WHAT MAKES US DIFFERENT - McKinsey Feature */}
-      <section className="bg-[#F8F9FA] py-4xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom">
           <AnimatedSection>
             <div className="mb-16">
@@ -203,15 +212,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5 — HOW WE WORK - McKinsey Principles */}
-      <section className="bg-white py-4xl">
-        <div className="container-custom">
+      {/* SECTION 5 — HOW WE WORK - Premium Principles */}
+      <section className="bg-white py-16 md:py-20 lg:py-24">
+        <div className="container-custom max-w-7xl">
           <AnimatedSection>
-            <div className="mb-16">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-4">
-                Approach
-              </p>
-              <h2 className="font-display text-[36px] text-[#0F1113] font-semibold leading-[1.2]">
+            {/* Section Header */}
+            <div className="mb-20 text-center">
+              <div className="inline-flex items-center gap-2 mb-4">
+                <div className="w-8 h-0.5 bg-primary-teal"></div>
+                <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
+                  Approach
+                </p>
+                <div className="w-8 h-0.5 bg-primary-teal"></div>
+              </div>
+              <h2 className="font-display text-4xl md:text-5xl text-neutral-900 font-bold mb-4">
                 Three non-negotiable principles
               </h2>
             </div>
@@ -219,11 +233,20 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {principles.map((principle, index) => (
                 <AnimatedSection key={principle.title} delay={index * 120}>
-                  <div className="border-t-4 border-[#2F5D62] pt-6">
-                    <h3 className="font-display text-[24px] text-[#0F1113] font-semibold mb-4">
+                  <div className="card-feature h-full group cursor-pointer">
+                    {/* Icon */}
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-teal/10 to-primary-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-7 h-7 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        {index === 0 && <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />}
+                        {index === 1 && <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />}
+                        {index === 2 && <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
+                      </svg>
+                    </div>
+                    
+                    <h3 className="font-display text-2xl text-neutral-900 font-semibold mb-4 group-hover:text-primary-teal transition-colors">
                       {principle.title}
                     </h3>
-                    <p className="text-[15px] text-[#6B7280] leading-[1.7]">
+                    <p className="text-base text-neutral-600 leading-relaxed">
                       {principle.description}
                     </p>
                   </div>
@@ -238,7 +261,7 @@ export default function AboutPage() {
       <DeliveryWheel />
 
       {/* SECTION 7 — CLOSING STATEMENT - McKinsey Quote */}
-      <section className="bg-[#F8F9FA] py-4xl">
+      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-wide text-center">
           <AnimatedSection>
             <div className="border-l-4 border-[#2F5D62] pl-12 text-left max-w-3xl mx-auto">
