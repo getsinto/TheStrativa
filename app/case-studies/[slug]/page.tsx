@@ -88,7 +88,20 @@ import FlagshipCaseStudy from '@/components/case-studies/FlagshipCaseStudy';
 export default async function CaseStudyPage({ params }: { params: { slug: string } }) {
   const caseStudy = await getCaseStudy(params.slug);
 
+  console.log('Case study slug:', params.slug);
+  console.log('Case study found:', !!caseStudy);
+  console.log('Case study data:', caseStudy ? {
+    title: caseStudy.title,
+    isFlagship: caseStudy.isFlagship,
+    hasTheSituation: !!caseStudy.theSituation,
+    hasWhatWasAtRisk: !!caseStudy.whatWasAtRisk,
+    hasWhatWeDid: !!caseStudy.whatWeDid,
+    hasTheResult: !!caseStudy.theResult,
+    hasWhyItWorked: !!caseStudy.whyItWorked,
+  } : 'null');
+
   if (!caseStudy) {
+    console.log('Case study not found, returning 404');
     notFound();
   }
 
@@ -99,13 +112,24 @@ export default async function CaseStudyPage({ params }: { params: { slug: string
 
   // Render flagship case study with special layout
   if (caseStudy.isFlagship && caseStudy.sections) {
+    console.log('Rendering flagship case study');
     return <FlagshipCaseStudy caseStudy={caseStudy} nextCaseStudy={nextCaseStudy} formatDate={formatDate} />;
   }
 
   // Safety check - ensure all required properties exist
   if (!caseStudy.theSituation || !caseStudy.whatWasAtRisk || !caseStudy.whatWeDid || !caseStudy.theResult || !caseStudy.whyItWorked) {
+    console.log('Missing required properties, returning 404');
+    console.log('Missing:', {
+      theSituation: !caseStudy.theSituation,
+      whatWasAtRisk: !caseStudy.whatWasAtRisk,
+      whatWeDid: !caseStudy.whatWeDid,
+      theResult: !caseStudy.theResult,
+      whyItWorked: !caseStudy.whyItWorked,
+    });
     notFound();
   }
+
+  console.log('Rendering regular case study');
 
   // Render regular case study
   return (
