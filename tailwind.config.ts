@@ -9,21 +9,44 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Original colors (keeping for compatibility)
+        // Premium Corporate Palette
+        primary: {
+          navy: '#001F3F',
+          teal: '#0A5F5F',
+          gold: '#C9A961',
+        },
+        neutral: {
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#E8E8E8',
+          300: '#D4D4D4',
+          400: '#A3A3A3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
+        },
+        semantic: {
+          success: '#059669',
+          warning: '#D97706',
+          error: '#DC2626',
+          info: '#0284C7',
+        },
+        // Legacy colors (keeping for compatibility)
         charcoal: '#0F1113',
         offwhite: '#F7F6F3',
         teal: {
-          DEFAULT: '#2F5D62',
+          DEFAULT: '#0A5F5F',
           light: '#3D7A81',
           dark: '#1E3D40',
         },
         bronze: '#A89F91',
         mist: '#E8E6E1',
-        // McKinsey design system colors
         navy: {
-          DEFAULT: '#003366',
+          DEFAULT: '#001F3F',
           dark: '#002244',
-          light: '#004488',
+          light: '#003366',
         },
         steel: {
           DEFAULT: '#6B7280',
@@ -31,16 +54,16 @@ const config: Config = {
           dark: '#4B5563',
         },
         gray: {
-          50: '#F9FAFB',
-          100: '#F3F4F6',
-          200: '#E5E7EB',
-          300: '#D1D5DB',
-          400: '#9CA3AF',
-          500: '#6B7280',
-          600: '#4B5563',
-          700: '#374151',
-          800: '#1F2937',
-          900: '#111827',
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#E8E8E8',
+          300: '#D4D4D4',
+          400: '#A3A3A3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
         },
       },
       fontFamily: {
@@ -48,7 +71,19 @@ const config: Config = {
         body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       fontSize: {
-        // McKinsey typography scale
+        // Premium Typography Scale (Fluid)
+        'xs': ['0.75rem', { lineHeight: '1.5', letterSpacing: '0.01em', fontWeight: '400' }],
+        'sm': ['0.875rem', { lineHeight: '1.5', letterSpacing: '0.01em', fontWeight: '400' }],
+        'base': ['1rem', { lineHeight: '1.625', letterSpacing: '0', fontWeight: '400' }],
+        'lg': ['1.125rem', { lineHeight: '1.625', letterSpacing: '0', fontWeight: '400' }],
+        'xl': ['1.25rem', { lineHeight: '1.5', letterSpacing: '-0.01em', fontWeight: '500' }],
+        '2xl': ['1.5rem', { lineHeight: '1.375', letterSpacing: '-0.01em', fontWeight: '600' }],
+        '3xl': ['1.875rem', { lineHeight: '1.3', letterSpacing: '-0.02em', fontWeight: '600' }],
+        '4xl': ['2.25rem', { lineHeight: '1.2', letterSpacing: '-0.02em', fontWeight: '700' }],
+        '5xl': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.03em', fontWeight: '700' }],
+        '6xl': ['3.75rem', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '700' }],
+        '7xl': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.04em', fontWeight: '800' }],
+        // Legacy sizes
         'hero': ['72px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
         'h1': ['48px', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '600' }],
         'h2': ['36px', { lineHeight: '1.3', letterSpacing: '0', fontWeight: '600' }],
@@ -118,13 +153,35 @@ const config: Config = {
         },
       },
       boxShadow: {
+        'xs': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        'sm': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
+        'md': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
+        'lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
+        'xl': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+        '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+        'premium': '0 30px 60px -15px rgba(0, 31, 63, 0.15)',
+        'card': '0 2px 8px rgba(0, 0, 0, 0.04)',
+        'card-hover': '0 12px 24px rgba(0, 31, 63, 0.08)',
         'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
-        'card-hover': '0 20px 25px -5px rgba(47, 93, 98, 0.1), 0 10px 10px -5px rgba(47, 93, 98, 0.04)',
-        'premium': '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
+      },
+      borderRadius: {
+        'none': '0',
+        'sm': '0.25rem',
+        'DEFAULT': '0.375rem',
+        'md': '0.5rem',
+        'lg': '0.75rem',
+        'xl': '1rem',
+        '2xl': '1.5rem',
+        'full': '9999px',
       },
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'premium': 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+      transitionDuration: {
+        'fast': '150ms',
+        'normal': '300ms',
+        'slow': '500ms',
       },
     },
   },
