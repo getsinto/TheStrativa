@@ -74,10 +74,10 @@ export async function generateStaticParams() {
       }));
     }
   } catch (error) {
-    console.error('Error generating static params:', error);
+    console.error('Error generating static params from Sanity:', error);
   }
   
-  // Fallback to static data
+  // Fallback to static data - generate params for ALL case studies
   return STATIC_CASE_STUDIES.map((study) => ({
     slug: study.slug.current,
   }));

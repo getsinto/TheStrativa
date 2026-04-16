@@ -69,7 +69,7 @@ export default function AnimatedSection({
       style={{
         opacity: isVisible ? 1 : 0,
         transform: isVisible ? 'none' : getTransform(direction, distance),
-        transition: `opacity 0.8s ease-out ${delay}ms, transform 0.8s ease-out ${delay}ms`,
+        transition: `opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1) ${delay}ms, transform 0.9s cubic-bezier(0.4, 0, 0.2, 1) ${delay}ms`,
         willChange: 'opacity, transform',
       }}
     >

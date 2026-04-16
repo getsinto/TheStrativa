@@ -69,21 +69,21 @@ export default function HomePage() {
             <div className="lg:col-span-5 hidden lg:block animate-fade-in-up" style={{ animationDelay: '150ms' }}>
               <div className="relative">
                 {/* Hero Image with modern styling */}
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#2F5D62]/10">
+                <div className="relative rounded-2xl overflow-hidden shadow-premium">
                   <div className="aspect-[4/5] bg-gradient-to-br from-[#F8F9FA] via-white to-[#E5E7EB]">
                     <img 
                       src="/images/cases/hero-consulting.jpg" 
                       alt="Professional programme delivery"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     />
                   </div>
                   
                   {/* Subtle overlay for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1113]/5 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F1113]/8 to-transparent pointer-events-none" />
                 </div>
                 
                 {/* Floating accent card */}
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 border border-[#E5E7EB] max-w-[200px]">
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-premium p-6 border border-[#E5E7EB] max-w-[200px] hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-10 h-10 rounded-full bg-[#2F5D62]/10 flex items-center justify-center">
                       <svg className="w-5 h-5 text-[#2F5D62]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -100,7 +100,7 @@ export default function HomePage() {
                 </div>
                 
                 {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#2F5D62] opacity-5 rounded-2xl -z-10 blur-xl" />
+                <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#2F5D62] opacity-5 rounded-2xl -z-10 blur-xl animate-pulse" style={{ animationDuration: '3s' }} />
               </div>
             </div>
           </div>
@@ -151,8 +151,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 */}
             <AnimatedSection delay={0}>
-              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] transition-all duration-200 h-full">
-                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4">
+              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] hover:-translate-y-1 transition-all duration-300 h-full group">
+                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4 group-hover:text-[#2F5D62] transition-colors">
                   Clarity
                 </h3>
                 <p className="text-[15px] text-[#6B7280] leading-[1.6]">
@@ -163,8 +163,8 @@ export default function HomePage() {
 
             {/* Card 2 */}
             <AnimatedSection delay={120}>
-              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] transition-all duration-200 h-full">
-                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4">
+              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] hover:-translate-y-1 transition-all duration-300 h-full group">
+                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4 group-hover:text-[#2F5D62] transition-colors">
                   Control
                 </h3>
                 <p className="text-[15px] text-[#6B7280] leading-[1.6]">
@@ -175,8 +175,8 @@ export default function HomePage() {
 
             {/* Card 3 */}
             <AnimatedSection delay={240}>
-              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] transition-all duration-200 h-full">
-                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4">
+              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] hover:-translate-y-1 transition-all duration-300 h-full group">
+                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4 group-hover:text-[#2F5D62] transition-colors">
                   Delivery
                 </h3>
                 <p className="text-[15px] text-[#6B7280] leading-[1.6]">
@@ -187,8 +187,8 @@ export default function HomePage() {
 
             {/* Card 4 */}
             <AnimatedSection delay={360}>
-              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] transition-all duration-200 h-full">
-                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4">
+              <div className="bg-white border border-[#E5E7EB] p-8 hover:shadow-card-hover hover:border-[#2F5D62] hover:-translate-y-1 transition-all duration-300 h-full group">
+                <h3 className="font-display text-[20px] text-[#0F1113] font-semibold mb-4 group-hover:text-[#2F5D62] transition-colors">
                   Website Delivery
                 </h3>
                 <p className="text-[15px] text-[#6B7280] leading-[1.6]">
@@ -214,13 +214,13 @@ export default function HomePage() {
             </div>
 
             {/* Featured Case Study Block */}
-            <div className="bg-white border border-[#E5E7EB] grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:shadow-card-hover transition-shadow duration-300">
+            <div className="bg-white border border-[#E5E7EB] grid grid-cols-1 lg:grid-cols-2 overflow-hidden hover:shadow-card-hover hover:border-[#2F5D62] transition-all duration-300 group">
               {/* Image */}
               <div className="bg-gradient-to-br from-[#F8F9FA] to-[#E5E7EB] h-64 lg:h-auto relative overflow-hidden">
                 <img 
                   src="/images/cases/case.jpg" 
                   alt="ERP Programme Closure"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
@@ -229,7 +229,7 @@ export default function HomePage() {
                 <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-6">
                   ERP Programme Closure
                 </p>
-                <h3 className="font-display text-[28px] text-[#0F1113] font-semibold mb-6 leading-[1.3]">
+                <h3 className="font-display text-[28px] text-[#0F1113] font-semibold mb-6 leading-[1.3] group-hover:text-[#2F5D62] transition-colors">
                   A complex ERP programme brought to a controlled, credible closure
                 </h3>
                 <p className="text-[16px] leading-[1.7] text-[#6B7280] mb-8">
@@ -240,9 +240,9 @@ export default function HomePage() {
                     A controlled closure, not a forced ending.
                   </p>
                 </div>
-                <Link href="/case-studies" className="inline-flex items-center gap-2 text-[16px] font-semibold text-[#2F5D62] hover:text-[#1E3D40] transition-colors group">
+                <Link href="/case-studies" className="inline-flex items-center gap-2 text-[16px] font-semibold text-[#2F5D62] hover:text-[#1E3D40] transition-colors group/link">
                   Read case study
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>

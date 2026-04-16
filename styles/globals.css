@@ -55,6 +55,8 @@ body {
   line-height: var(--line-height-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 ::selection {
@@ -68,17 +70,18 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--color-gray-100);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-teal);
-  border-radius: 0;
+  border-radius: 5px;
+  border: 2px solid var(--color-gray-100);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -96,6 +99,7 @@ input,
 textarea,
 select {
   outline: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button:focus-visible,
@@ -179,6 +183,26 @@ h6 {
   }
 }
 
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
 /* Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -243,6 +267,7 @@ h6 {
   
   .mckinsey-card:hover {
     @apply shadow-card-hover border-charcoal;
+    transform: translateY(-2px);
   }
   
   .line-clamp-3 {
@@ -250,5 +275,45 @@ h6 {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  
+  /* Premium utility classes */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2;
+  }
+  
+  .gradient-radial {
+    background: radial-gradient(circle at center, var(--color-teal) 0%, transparent 70%);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Link underline animation */
+  a.link-underline {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  a.link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  a.link-underline:hover::after {
+    width: 100%;
   }
 }

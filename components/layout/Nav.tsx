@@ -101,22 +101,23 @@ export default function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative text-[14px] font-medium transition-colors duration-200 hover:text-[#2F5D62] ${
+                  className={`relative text-[14px] font-medium transition-all duration-300 hover:text-[#2F5D62] group ${
                     pathname === link.href ? 'text-[#2F5D62]' : 'text-[#0F1113]'
                   }`}
                   style={{ letterSpacing: '0.02em' }}
                 >
                   {link.label}
-                  {pathname === link.href && (
-                    <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-[#2F5D62]"></span>
-                  )}
+                  <span className={`absolute -bottom-1 left-0 h-[2px] bg-[#2F5D62] transition-all duration-300 ${
+                    pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-2.5 text-[13px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-200 hover:bg-[#1E3D40] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5D62] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center px-6 py-2.5 text-[13px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-300 hover:bg-[#1E3D40] hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5D62] focus-visible:ring-offset-2 relative overflow-hidden group"
               >
-                Start a Conversation
+                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
+                <span className="relative z-10">Start a Conversation</span>
               </Link>
             </div>
 
@@ -172,14 +173,17 @@ export default function Nav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`font-display text-[28px] text-[#0F1113] py-3 transition-all duration-200 hover:text-[#2F5D62] hover:translate-x-2 ${
+                className={`font-display text-[28px] text-[#0F1113] py-3 transition-all duration-300 hover:text-[#2F5D62] hover:translate-x-2 relative group ${
                   pathname === link.href ? 'text-[#2F5D62] font-semibold' : ''
                 }`}
                 style={{
                   transitionDelay: isOpen ? `${index * 50}ms` : '0ms',
                 }}
               >
-                {link.label}
+                <span className="relative z-10">{link.label}</span>
+                <span className={`absolute left-0 bottom-2 h-[2px] bg-[#2F5D62] transition-all duration-300 ${
+                  pathname === link.href ? 'w-12' : 'w-0 group-hover:w-12'
+                }`}></span>
               </Link>
             ))}
           </nav>
@@ -189,9 +193,10 @@ export default function Nav() {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="w-full inline-flex items-center justify-center px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-200 hover:bg-[#1E3D40]"
+              className="w-full inline-flex items-center justify-center px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-300 hover:bg-[#1E3D40] hover:shadow-lg relative overflow-hidden group"
             >
-              Start a Conversation
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
+              <span className="relative z-10">Start a Conversation</span>
             </Link>
             
             {/* Contact Info */}
