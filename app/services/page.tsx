@@ -88,48 +88,51 @@ export default async function ServicesPage() {
 
   return (
     <main className="pt-20">
-      {/* HERO */}
-      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-16 md:py-20 lg:py-24">
-        <div className="container-custom max-w-4xl text-center">
+      {/* HERO - Sophisticated & Clean */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230A5F5F' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+
+        <div className="container-custom max-w-4xl py-16 md:py-20 lg:py-24 relative text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="w-8 h-0.5 bg-primary-teal"></div>
-              <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
-                Services
-              </p>
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary-teal">Services</span>
               <div className="w-8 h-0.5 bg-primary-teal"></div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 leading-tight mb-6 font-bold tracking-tight">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-neutral-900 leading-tight mb-6 tracking-tight">
               We support delivery where it matters most
             </h1>
 
-            <p className="text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-neutral-600 leading-relaxed max-w-2xl mx-auto">
               Three areas of focus. One consistent standard.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SERVICES GRID - Premium Card Style */}
-      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
+      {/* SERVICES GRID - Clean Professional Cards */}
+      <section className="bg-neutral-50 py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service: any, index: number) => (
               <AnimatedSection key={service._id} delay={index * 100}>
-                <div className="card-feature h-full group cursor-pointer">
+                <div className="h-full p-8 rounded-2xl bg-white border border-neutral-200 hover:border-primary-teal hover:shadow-lg transition-all duration-300 group">
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-teal/10 to-primary-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-7 h-7 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="w-12 h-12 rounded-xl bg-primary-teal/10 flex items-center justify-center mb-6 group-hover:bg-primary-teal/20 transition-colors">
+                    <svg className="w-6 h-6 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       {getIcon(service.icon || 'clipboard')}
                     </svg>
                   </div>
                   
-                  <h3 className="font-display text-2xl text-neutral-900 font-semibold mb-4 group-hover:text-primary-teal transition-colors">
+                  <h3 className="font-display text-2xl text-neutral-900 mb-4 group-hover:text-primary-teal transition-colors">
                     {service.title}
                   </h3>
                   
-                  <p className="text-base text-neutral-600 leading-relaxed mb-6">
+                  <p className="text-neutral-600 leading-relaxed mb-6">
                     {service.summary}
                   </p>
 
@@ -151,7 +154,7 @@ export default async function ServicesPage() {
 
                   {/* Outcome */}
                   <div className="pt-4 border-t border-neutral-200">
-                    <p className="font-display italic text-base text-primary-teal font-semibold">
+                    <p className="font-display italic text-primary-teal">
                       {service.outcome}
                     </p>
                   </div>
@@ -165,40 +168,34 @@ export default async function ServicesPage() {
       {/* DELIVERY MODEL */}
       <DeliveryWheel />
 
-      {/* BOTTOM CTA */}
-      <section className="relative bg-gradient-to-br from-primary-navy via-[#003366] to-primary-teal py-16 md:py-20 lg:py-24 overflow-hidden">
-        {/* Pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
+      {/* BOTTOM CTA - Clean Professional */}
+      <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-16 md:py-20 lg:py-24 overflow-hidden">
+        {/* Subtle pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
         
-        <div className="container-custom max-w-4xl relative z-10">
+        <div className="container-custom max-w-4xl relative">
           <AnimatedSection>
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 mb-8">
-                <div className="w-8 h-0.5 bg-primary-gold"></div>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary-gold">
-                  Get in touch
-                </p>
-                <div className="w-8 h-0.5 bg-primary-gold"></div>
+            <div className="text-center space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/20">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-gold"></div>
+                <span className="text-xs font-medium text-white uppercase tracking-wider">Get in touch</span>
               </div>
               
-              <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-6 leading-tight">
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
                 Ready to discuss your programme?
               </h2>
               
-              <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed">
+              <p className="text-xl text-white/80 max-w-2xl mx-auto">
                 Let's explore how we can bring clarity and control to your delivery challenges
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/contact" variant="primary" className="bg-white text-primary-navy hover:bg-neutral-50">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <Button href="/contact" variant="primary" className="bg-white text-neutral-900 hover:bg-neutral-100">
                   Start a conversation
                 </Button>
-                <Button href="/case-studies" variant="secondary" className="border-white text-white hover:bg-white hover:text-primary-navy">
+                <Button href="/case-studies" variant="secondary" className="border-white/30 text-white hover:bg-white/10">
                   View our work
                 </Button>
               </div>

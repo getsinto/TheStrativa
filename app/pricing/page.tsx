@@ -80,48 +80,51 @@ const getIcon = (iconName: string) => {
 export default function PricingPage() {
   return (
     <main className="pt-20">
-      {/* HERO */}
-      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-16 md:py-20 lg:py-24">
-        <div className="container-custom max-w-4xl text-center">
+      {/* HERO - Sophisticated & Clean */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230A5F5F' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+
+        <div className="container-custom max-w-4xl py-16 md:py-20 lg:py-24 relative text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="w-8 h-0.5 bg-primary-teal"></div>
-              <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
-                Pricing
-              </p>
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary-teal">Pricing</span>
               <div className="w-8 h-0.5 bg-primary-teal"></div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 leading-tight mb-6 font-bold tracking-tight">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-neutral-900 leading-tight mb-6 tracking-tight">
               Simple, clear support based on what you need
             </h1>
 
-            <p className="text-lg text-neutral-600 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-neutral-600 leading-relaxed max-w-2xl mx-auto">
               We offer four levels of support depending on your situation. Each is designed to bring clarity, structure, and control to your work.
             </p>
           </div>
         </div>
       </section>
 
-      {/* PRICING TIERS - Premium Card Style */}
-      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
+      {/* PRICING TIERS - Clean Professional Cards */}
+      <section className="bg-neutral-50 py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pricingTiers.map((tier, index) => (
               <AnimatedSection key={tier.id} delay={index * 100}>
-                <div className="card-premium h-full flex flex-col group cursor-pointer">
+                <div className="h-full flex flex-col p-8 rounded-2xl bg-white border border-neutral-200 hover:border-primary-teal hover:shadow-lg transition-all duration-300 group">
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-teal/10 to-primary-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-7 h-7 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="w-12 h-12 rounded-xl bg-primary-teal/10 flex items-center justify-center mb-6 group-hover:bg-primary-teal/20 transition-colors">
+                    <svg className="w-6 h-6 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       {getIcon(tier.icon)}
                     </svg>
                   </div>
 
-                  <h3 className="font-display text-3xl text-neutral-900 font-semibold mb-3 group-hover:text-primary-teal transition-colors">
+                  <h3 className="font-display text-3xl text-neutral-900 mb-3 group-hover:text-primary-teal transition-colors">
                     {tier.name}
                   </h3>
                   
-                  <p className="text-base text-neutral-600 leading-relaxed mb-6">
+                  <p className="text-neutral-600 leading-relaxed mb-6">
                     {tier.tagline}
                   </p>
 
@@ -145,7 +148,7 @@ export default function PricingPage() {
                     <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-2">
                       Outcome:
                     </p>
-                    <p className="font-display italic text-lg text-primary-teal font-semibold">
+                    <p className="font-display italic text-lg text-primary-teal">
                       {tier.outcome}
                     </p>
                   </div>
@@ -155,7 +158,7 @@ export default function PricingPage() {
                     <p className="text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-2">
                       Price:
                     </p>
-                    <p className="font-display text-3xl text-neutral-900 font-bold mb-1">
+                    <p className="font-display text-3xl text-neutral-900 mb-1">
                       {tier.price}
                     </p>
                     <p className="text-sm text-neutral-500">
@@ -169,50 +172,47 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="relative bg-gradient-to-br from-primary-navy via-[#003366] to-primary-teal py-16 md:py-20 lg:py-24 overflow-hidden">
-        {/* Pattern overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
+      {/* FINAL CTA - Clean Professional */}
+      <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-16 md:py-20 lg:py-24 overflow-hidden">
+        {/* Subtle pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
         
-        <div className="container-custom max-w-4xl relative z-10">
+        <div className="container-custom max-w-4xl relative">
           <AnimatedSection>
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 mb-8">
-                <div className="w-8 h-0.5 bg-primary-gold"></div>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary-gold">
-                  Get in touch
-                </p>
-                <div className="w-8 h-0.5 bg-primary-gold"></div>
+            <div className="text-center space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full border border-white/20">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-gold"></div>
+                <span className="text-xs font-medium text-white uppercase tracking-wider">Get in touch</span>
               </div>
               
-              <h2 className="font-display text-4xl md:text-5xl text-white font-bold mb-6 leading-tight">
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
                 If you are unsure which level you need, we will guide you
               </h2>
               
-              <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed">
+              <p className="text-xl text-white/80 max-w-2xl mx-auto">
                 Let's have a conversation about your specific situation
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button href="/contact" variant="primary" className="bg-white text-primary-navy hover:bg-neutral-50">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                <Button href="/contact" variant="primary" className="bg-white text-neutral-900 hover:bg-neutral-100">
                   Start a conversation
                 </Button>
               </div>
 
-              <p className="text-sm text-white/70">
-                Or email us at{' '}
+              <div className="pt-8 border-t border-white/10">
+                <p className="text-sm text-white/60 mb-2">Or email us directly</p>
                 <a
                   href="mailto:hello@stratoraconsulting.com"
-                  className="text-primary-gold hover:text-white font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-lg font-medium text-white hover:text-primary-gold transition-colors"
                 >
-                  hello@stratoraconsulting.com
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span>hello@stratoraconsulting.com</span>
                 </a>
-              </p>
+              </div>
             </div>
           </AnimatedSection>
         </div>

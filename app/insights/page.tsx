@@ -78,39 +78,42 @@ export default async function InsightsPage() {
 
   return (
     <main className="pt-20">
-      {/* HERO */}
-      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-16 md:py-20 lg:py-24">
-        <div className="container-custom max-w-4xl text-center">
+      {/* HERO - Sophisticated & Clean */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230A5F5F' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+
+        <div className="container-custom max-w-4xl py-16 md:py-20 lg:py-24 relative text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="w-8 h-0.5 bg-primary-teal"></div>
-              <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
-                Insights
-              </p>
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary-teal">Insights</span>
               <div className="w-8 h-0.5 bg-primary-teal"></div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 leading-tight mb-6 font-bold tracking-tight">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-neutral-900 leading-tight mb-6 tracking-tight">
               Thinking clearly about delivery
             </h1>
 
-            <p className="text-lg text-neutral-600 leading-relaxed">
+            <p className="text-xl text-neutral-600 leading-relaxed">
               Points of view from the Stratora team
             </p>
           </div>
         </div>
       </section>
 
-      {/* INSIGHTS GRID - Premium Card Style */}
-      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
+      {/* INSIGHTS GRID - Clean Professional Cards */}
+      <section className="bg-neutral-50 py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {insights.map((insight: any, index: number) => (
               <AnimatedSection key={insight._id} delay={index * 100}>
                 <Link href={`/insights/${insight.slug.current}`}>
-                  <article className="card-premium h-full group cursor-pointer flex flex-col">
+                  <article className="h-full flex flex-col p-8 rounded-2xl bg-white border border-neutral-200 hover:border-primary-teal hover:shadow-lg transition-all duration-300 group">
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-teal/10 to-primary-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-primary-teal/10 flex items-center justify-center mb-6 group-hover:bg-primary-teal/20 transition-colors">
                       <svg className="w-6 h-6 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                       </svg>
@@ -122,17 +125,17 @@ export default async function InsightsPage() {
                     </time>
 
                     {/* Title */}
-                    <h2 className="font-display text-2xl text-neutral-900 mb-4 leading-tight font-semibold group-hover:text-primary-teal transition-colors">
+                    <h2 className="font-display text-2xl text-neutral-900 mb-4 leading-tight group-hover:text-primary-teal transition-colors">
                       {insight.title}
                     </h2>
 
                     {/* Summary */}
-                    <p className="text-base text-neutral-600 leading-relaxed mb-4">
+                    <p className="text-neutral-600 leading-relaxed mb-4">
                       {insight.summary}
                     </p>
 
                     {/* Pull quote */}
-                    <p className="font-display italic text-base text-primary-teal leading-relaxed mb-6 flex-1">
+                    <p className="font-display italic text-primary-teal leading-relaxed mb-6 flex-1">
                       "{insight.quote}"
                     </p>
 
@@ -156,12 +159,12 @@ export default async function InsightsPage() {
             <AnimatedSection>
               <div className="inline-flex items-center gap-2 mb-6">
                 <div className="w-8 h-0.5 bg-primary-teal"></div>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary-teal">
                   Get in touch
                 </p>
                 <div className="w-8 h-0.5 bg-primary-teal"></div>
               </div>
-              <h3 className="font-display text-3xl md:text-4xl text-neutral-900 font-bold mb-8">
+              <h3 className="font-display text-3xl md:text-4xl text-neutral-900 mb-8">
                 Want to discuss your programme delivery?
               </h3>
               <Button href="/contact" variant="primary">

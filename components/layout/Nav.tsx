@@ -8,9 +8,8 @@ const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/insights', label: 'Insights' },
-  { href: '/delivery-standards', label: 'Delivery Standards' },
-  { href: '/pricing', label: 'Pricing' },
   { href: '/about', label: 'About' },
+  { href: '/pricing', label: 'Pricing' },
 ];
 
 export default function Nav() {
@@ -18,13 +17,9 @@ export default function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  // Pages with dark hero sections
-  const darkHeroPages = ['/contact', '/insights', '/case-studies'];
-  const hasDarkHero = darkHeroPages.some(page => pathname.startsWith(page));
-
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 60);
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -47,21 +42,18 @@ export default function Nav() {
     };
   }, [isOpen]);
 
-  // Use white background on dark hero pages when not scrolled
-  const shouldUseWhiteBg = isScrolled || hasDarkHero;
-
-  const navStyle = {
-    backgroundColor: shouldUseWhiteBg ? 'rgba(247, 246, 243, 0.95)' : 'transparent',
-    backdropFilter: shouldUseWhiteBg ? 'blur(12px)' : 'none',
-    borderBottom: shouldUseWhiteBg ? '1px solid #E8E6E1' : '1px solid transparent',
-    transition: 'background-color 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease',
-  };
-
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-[100] h-20" style={navStyle} aria-label="Main navigation">
-        <div className="container-custom h-full">
-          <div className="flex items-center justify-between h-full">
+      <nav 
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-neutral-200' 
+            : 'bg-transparent'
+        }`}
+        aria-label="Main navigation"
+      >
+        <div className="container-custom">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link 
               href="/" 
@@ -74,11 +66,11 @@ export default function Nav() {
                 viewBox="0 0 32 32"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="transition-transform duration-300 group-hover:scale-110"
+                className="transition-transform duration-300 group-hover:scale-105"
               >
                 <path
                   d="M16 4C12 4 9 6 9 9C9 11 10 12 12 13C10 14 8 15 8 18C8 21 11 24 16 24C21 24 24 21 24 18C24 15 22 14 20 13C22 12 23 11 23 9C23 6 20 4 16 4Z"
-                  stroke="#2F5D62"
+                  stroke="#0A5F5F"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -86,60 +78,57 @@ export default function Nav() {
                 />
               </svg>
               <div className="flex flex-col">
-                <span className="font-display text-[11px] tracking-[0.15em] text-[#0F1113] font-medium uppercase leading-tight">
+                <span className="font-display text-[11px] tracking-[0.15em] text-neutral-900 font-semibold uppercase leading-tight">
                   STRATORA
                 </span>
-                <span className="font-display text-[9px] tracking-[0.15em] text-[#525250] font-normal uppercase leading-tight">
+                <span className="font-display text-[9px] tracking-[0.15em] text-neutral-600 font-normal uppercase leading-tight">
                   CONSULTING
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative text-[14px] font-medium transition-all duration-300 hover:text-[#2F5D62] group ${
-                    pathname === link.href ? 'text-[#2F5D62]' : 'text-[#0F1113]'
+                  className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
+                    pathname === link.href 
+                      ? 'text-primary-teal bg-primary-teal/5' 
+                      : 'text-neutral-700 hover:text-primary-teal hover:bg-neutral-50'
                   }`}
-                  style={{ letterSpacing: '0.02em' }}
                 >
                   {link.label}
-                  <span className={`absolute -bottom-1 left-0 h-[2px] bg-[#2F5D62] transition-all duration-300 ${
-                    pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
                 </Link>
               ))}
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-2.5 text-[13px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-300 hover:bg-[#1E3D40] hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2F5D62] focus-visible:ring-offset-2 relative overflow-hidden group"
+                className="ml-4 px-6 py-2.5 text-sm font-semibold bg-primary-teal text-white rounded-lg hover:bg-primary-teal/90 transition-all duration-200 hover:shadow-md"
               >
-                <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
-                <span className="relative z-10">Start a Conversation</span>
+                Get in touch
               </Link>
             </div>
 
             {/* Mobile Hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden flex flex-col justify-center items-center w-10 h-10 relative z-[110]"
+              className="lg:hidden flex flex-col justify-center items-center w-10 h-10 relative z-[110]"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
             >
               <span
-                className={`block w-5 h-[1.5px] bg-[#0F1113] transition-all duration-300 ${
+                className={`block w-5 h-[2px] bg-neutral-900 transition-all duration-300 ${
                   isOpen ? 'rotate-45 translate-y-[3px]' : ''
                 }`}
               />
               <span
-                className={`block w-5 h-[1.5px] bg-[#0F1113] mt-[5px] transition-all duration-300 ${
+                className={`block w-5 h-[2px] bg-neutral-900 mt-[5px] transition-all duration-300 ${
                   isOpen ? 'opacity-0' : ''
                 }`}
               />
               <span
-                className={`block w-5 h-[1.5px] bg-[#0F1113] mt-[5px] transition-all duration-300 ${
+                className={`block w-5 h-[2px] bg-neutral-900 mt-[5px] transition-all duration-300 ${
                   isOpen ? '-rotate-45 -translate-y-[3px]' : ''
                 }`}
               />
@@ -151,60 +140,53 @@ export default function Nav() {
       {/* Mobile Menu Backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/40 z-[90] md:hidden transition-opacity duration-350"
+          className="fixed inset-0 bg-black/40 z-[90] lg:hidden transition-opacity duration-300"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 bottom-0 w-full bg-white z-[95] md:hidden transition-transform duration-350 ${
+        className={`fixed top-0 right-0 bottom-0 w-full max-w-sm bg-white z-[95] lg:hidden transition-transform duration-300 shadow-2xl ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{
-          transition: 'transform 350ms cubic-bezier(0.16, 1, 0.3, 1)',
-        }}
       >
-        <div className="flex flex-col h-full px-8 pt-32 pb-20 overflow-y-auto">
+        <div className="flex flex-col h-full px-8 pt-24 pb-20 overflow-y-auto">
           {/* Navigation Links */}
-          <nav className="flex-1 flex flex-col justify-center space-y-2 min-h-0">
+          <nav className="flex-1 flex flex-col space-y-2 min-h-0">
             {navLinks.map((link, index) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`font-display text-[28px] text-[#0F1113] py-3 transition-all duration-300 hover:text-[#2F5D62] hover:translate-x-2 relative group ${
-                  pathname === link.href ? 'text-[#2F5D62] font-semibold' : ''
+                className={`font-display text-2xl py-3 transition-all duration-300 hover:text-primary-teal hover:translate-x-2 ${
+                  pathname === link.href ? 'text-primary-teal font-semibold' : 'text-neutral-900'
                 }`}
                 style={{
                   transitionDelay: isOpen ? `${index * 50}ms` : '0ms',
                 }}
               >
-                <span className="relative z-10">{link.label}</span>
-                <span className={`absolute left-0 bottom-2 h-[2px] bg-[#2F5D62] transition-all duration-300 ${
-                  pathname === link.href ? 'w-12' : 'w-0 group-hover:w-12'
-                }`}></span>
+                {link.label}
               </Link>
             ))}
           </nav>
 
           {/* CTA Button */}
-          <div className="pt-8 border-t border-[#E5E7EB] flex-shrink-0">
+          <div className="pt-8 border-t border-neutral-200 flex-shrink-0">
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="w-full inline-flex items-center justify-center px-8 py-4 text-[14px] font-semibold uppercase tracking-[0.1em] bg-[#2F5D62] text-white transition-all duration-300 hover:bg-[#1E3D40] hover:shadow-lg relative overflow-hidden group"
+              className="w-full inline-flex items-center justify-center px-8 py-4 text-sm font-semibold bg-primary-teal text-white rounded-lg hover:bg-primary-teal/90 transition-all duration-200"
             >
-              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
-              <span className="relative z-10">Start a Conversation</span>
+              Get in touch
             </Link>
             
             {/* Contact Info */}
             <div className="mt-6 text-center pb-4">
-              <p className="text-[13px] text-[#6B7280] mb-2">Or email us at</p>
+              <p className="text-sm text-neutral-600 mb-2">Or email us at</p>
               <a
                 href="mailto:hello@stratoraconsulting.com"
-                className="text-[14px] text-[#2F5D62] hover:text-[#1E3D40] font-medium transition-colors break-words"
+                className="text-sm text-primary-teal hover:text-primary-teal/80 font-medium transition-colors break-words"
               >
                 hello@stratoraconsulting.com
               </a>

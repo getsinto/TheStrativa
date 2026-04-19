@@ -47,56 +47,59 @@ export default async function CaseStudiesPage() {
 
   return (
     <main className="pt-20">
-      {/* HERO */}
-      <section className="relative bg-white py-16 md:py-20 lg:py-24">
-        <div className="container-custom max-w-4xl text-center">
+      {/* HERO - Sophisticated & Clean */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230A5F5F' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+
+        <div className="container-custom max-w-4xl py-16 md:py-20 lg:py-24 relative text-center">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center gap-2 mb-6">
               <div className="w-8 h-0.5 bg-primary-teal"></div>
-              <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
-                Case Studies
-              </p>
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary-teal">Case Studies</span>
               <div className="w-8 h-0.5 bg-primary-teal"></div>
             </div>
 
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-neutral-900 leading-tight mb-6 font-bold tracking-tight">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-neutral-900 leading-tight mb-6 tracking-tight">
               Work that moved things forward
             </h1>
 
-            <p className="text-lg text-neutral-600">
+            <p className="text-xl text-neutral-600">
               Real programmes. Real conditions. Real outcomes.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CASE STUDIES GRID - Premium Card Style */}
-      <section className="bg-gradient-to-br from-neutral-50 to-white py-16 md:py-20 lg:py-24">
+      {/* CASE STUDIES GRID - Clean Professional Cards */}
+      <section className="bg-neutral-50 py-16 md:py-20 lg:py-24">
         <div className="container-custom max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study: any, index: number) => (
               <AnimatedSection key={study._id} delay={index * 100}>
                 <Link href={`/case-studies/${study.slug.current}`}>
-                  <article className="card-premium h-full group cursor-pointer">
+                  <article className="h-full p-8 rounded-2xl bg-white border border-neutral-200 hover:border-primary-teal hover:shadow-lg transition-all duration-300 group">
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-teal/10 to-primary-teal/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-primary-teal/10 flex items-center justify-center mb-6 group-hover:bg-primary-teal/20 transition-colors">
                       <svg className="w-6 h-6 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                     </div>
 
                     {/* Date */}
-                    <time className="text-xs text-primary-teal uppercase tracking-widest font-semibold block mb-4">
+                    <time className="text-xs text-primary-teal uppercase tracking-wider font-semibold block mb-4">
                       {formatDate(study.publishedAt)}
                     </time>
 
                     {/* Title */}
-                    <h2 className="font-display text-2xl text-neutral-900 font-semibold mb-4 leading-tight group-hover:text-primary-teal transition-colors">
+                    <h2 className="font-display text-2xl text-neutral-900 mb-4 leading-tight group-hover:text-primary-teal transition-colors">
                       {study.title}
                     </h2>
 
                     {/* Excerpt */}
-                    <p className="text-base text-neutral-600 leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-neutral-600 leading-relaxed mb-6 line-clamp-3">
                       {study.subtitle || study.situation}
                     </p>
 
@@ -118,12 +121,12 @@ export default async function CaseStudiesPage() {
             <AnimatedSection>
               <div className="inline-flex items-center gap-2 mb-6">
                 <div className="w-8 h-0.5 bg-primary-teal"></div>
-                <p className="text-xs font-bold uppercase tracking-widest text-primary-teal">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary-teal">
                   Get in touch
                 </p>
                 <div className="w-8 h-0.5 bg-primary-teal"></div>
               </div>
-              <h3 className="font-display text-3xl md:text-4xl text-neutral-900 font-bold mb-8">
+              <h3 className="font-display text-3xl md:text-4xl text-neutral-900 mb-8">
                 Have a similar challenge?
               </h3>
               <Button href="/contact" variant="primary">

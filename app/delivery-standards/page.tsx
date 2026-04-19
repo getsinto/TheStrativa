@@ -12,19 +12,26 @@ export const metadata = {
 export default function DeliveryStandardsPage() {
   return (
     <main className="pt-20">
-      {/* HERO - McKinsey Style */}
-      <section className="relative min-h-[50vh] bg-white flex items-center justify-center py-16 md:py-20 lg:py-24">
-        <div className="container-custom max-w-4xl text-center">
-          <div className="animate-fade-in-up">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-[#2F5D62] mb-8">
-              Delivery Standards
-            </p>
+      {/* HERO - Sophisticated & Clean */}
+      <section className="relative bg-white overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230A5F5F' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
 
-            <h1 className="font-display text-[clamp(40px,6vw,64px)] text-[#0F1113] leading-[1.2] mb-6 font-semibold tracking-[-0.02em]">
+        <div className="container-custom max-w-4xl py-16 md:py-20 lg:py-24 relative text-center">
+          <div className="animate-fade-in-up">
+            <div className="inline-flex items-center gap-2 mb-6">
+              <div className="w-8 h-0.5 bg-primary-teal"></div>
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary-teal">Delivery Standards</span>
+              <div className="w-8 h-0.5 bg-primary-teal"></div>
+            </div>
+
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-neutral-900 leading-[1.1] mb-6 tracking-tight">
               Stratora Consulting Delivery Standard
             </h1>
 
-            <p className="text-[24px] text-[#2F5D62] font-display font-semibold">
+            <p className="text-2xl text-primary-teal font-display font-semibold">
               Clarity. Structure. Delivery.
             </p>
           </div>
