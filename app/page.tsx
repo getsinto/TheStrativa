@@ -138,12 +138,9 @@ export default function HomePage() {
             
             {/* Bottom tagline */}
             <div className="mt-20 text-center">
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-white border border-neutral-200 rounded-full shadow-sm">
-                <div className="w-2 h-2 rounded-full bg-primary-teal animate-pulse"></div>
-                <p className="text-sm font-semibold uppercase tracking-wider text-neutral-600">
-                  We exist to fix that
-                </p>
-              </div>
+              <p className="text-base font-semibold text-neutral-600 italic">
+                We exist to fix that
+              </p>
             </div>
           </AnimatedSection>
         </div>
