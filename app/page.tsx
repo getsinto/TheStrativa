@@ -30,13 +30,13 @@ export default function HomePage() {
 
               {/* Main heading */}
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-neutral-900 tracking-tight">
-                Clarity where others see{' '}
                 <span className="relative inline-block">
-                  complexity
+                  Clarity
                   <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 5.5C50 2.5 150 2.5 199 5.5" stroke="#0A5F5F" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                 </span>
+                {' '}where others see complexity
               </h1>
 
               {/* Description */}
