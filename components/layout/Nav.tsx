@@ -165,9 +165,9 @@ export default function Nav() {
           transition: 'transform 350ms cubic-bezier(0.16, 1, 0.3, 1)',
         }}
       >
-        <div className="flex flex-col h-full px-8 pt-32 pb-12">
+        <div className="flex flex-col h-full px-8 pt-32 pb-20 overflow-y-auto">
           {/* Navigation Links */}
-          <nav className="flex-1 flex flex-col justify-center space-y-2">
+          <nav className="flex-1 flex flex-col justify-center space-y-2 min-h-0">
             {navLinks.map((link, index) => (
               <Link
                 key={link.href}
@@ -189,7 +189,7 @@ export default function Nav() {
           </nav>
 
           {/* CTA Button */}
-          <div className="pt-8 border-t border-[#E5E7EB]">
+          <div className="pt-8 border-t border-[#E5E7EB] flex-shrink-0">
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
@@ -200,11 +200,11 @@ export default function Nav() {
             </Link>
             
             {/* Contact Info */}
-            <div className="mt-6 text-center">
+            <div className="mt-6 text-center pb-4">
               <p className="text-[13px] text-[#6B7280] mb-2">Or email us at</p>
               <a
                 href="mailto:hello@stratoraconsulting.com"
-                className="text-[14px] text-[#2F5D62] hover:text-[#1E3D40] font-medium transition-colors"
+                className="text-[14px] text-[#2F5D62] hover:text-[#1E3D40] font-medium transition-colors break-words"
               >
                 hello@stratoraconsulting.com
               </a>
